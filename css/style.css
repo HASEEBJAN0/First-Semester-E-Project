@@ -1,0 +1,83 @@
+* {
+    font-family: "Roboto" !important;
+    font-optical-sizing: auto;
+}
+.bg-body-tertiary {
+    box-shadow: 2px 2px 15px 2px rgb(103, 102, 102);
+    /* border-radius: 0px 0px 20px 20px; */
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    backdrop-filter: blur(4px);
+    transition: ease-in-out .2s;
+   
+    
+}
+.nav-link:hover {
+        /* border-radius: 20px; */
+        /* border: 2px solid; */
+        /* background-color: black; */
+        /* color: white;  */
+        font-weight: bold;
+        /* text-decoration: underline; */
+        transform: scale(1.15);
+        /* transition: linear .2s; */
+        transition: ease-in .2s;
+    }
+
+    
+.navbar-brand{
+    transform: scale(2);
+}
+.nav-link {
+    /* transition: linear .2s; */
+    padding-right: 30px !important;
+    padding-left: 30px !important;
+    margin-bottom: 0 !important;
+}
+@media (max-width: 992px){
+    .nav-link{
+        border-bottom: 1px solid rgb(0, 0, 0);
+        /* margin-bottom: 5px !important; */
+    }
+    
+}
+.nav-link:hover{
+    /* border: none; */
+    transform: scale(1.01);
+    box-shadow: 2px 2px 2px 2px gray;
+}
+.navbar-toggler{
+    border: none !important;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.bi-list{
+    font-size: 38px !important  ;
+}
+.bi-x-lg {
+    font-size: 28px !important;
+}
+form .bi {
+    font-size: 1.7em;
+    cursor: pointer;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: rgba(224, 220, 220, 0.8) !important;
+    backdrop-filter: blur(1px);
+
+}
+.carousel-inner {
+    height: 80vh !important;
+    /* border: 5px solid green; */
+}
+.carousel {
+    height: 100% !important;
+    /* border: 5px solid red; */
+}
+.carousel-item , .carousel-item img {
+    width: 100% !important;
+    height: 100% !important;
+    /* border: 5px solid blue; */
+}
+
