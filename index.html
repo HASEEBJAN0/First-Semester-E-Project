@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary w-100 position-sticky top-0 z-3">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary w-100 position-fixed top-0 z-3">
         <div class="container">
             <a class="navbar-brand" href="./index.html">
                 <img src="./assets/logo.png" alt="" class="img-fluid" width="100px">
@@ -83,29 +83,77 @@
         </div>
     </nav>
 
-    <div id="carouselExampleFade" class="carousel slide carousel-fade ">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade position-relative z-2 w-100"
+        data-bs-interval="3000" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Brushes for Every Stroke</h2>
+                    <p>Our premium quality brushes are designed to deliver smooth and effortless strokes. Whether you
+                        are a beginner practicing at school or a professional artist working on detailed projects, these
+                        brushes ensure precision, durability, and comfort with every use.</p>
+                    <a href="products.html" class="btn btn-warning">Shop Now</a>
+                </div>
                 <img src="./assets/land01.png" class="d-sm-block d-none w-100" alt="...">
                 <img src="./assets/image01.png" class="d-sm-none d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Notebooks for Every Idea</h2>
+                    <p>Keep your thoughts, notes, and sketches safe in durable notebooks made for everyday use. Designed
+                        for classrooms, offices, and personal journaling, our notebooks combine strength with style so
+                        you never lose an important idea again.</p>
+                    <a href="products.html" class="btn btn-warning">Shop Now</a>
+                </div>
                 <img src="./assets/land02.png" class="d-sm-block d-none w-100" alt="...">
                 <img src="./assets/image02.png" class="d-sm-none d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Colors that Inspire Creativity</h2>
+                    <p>Keep your thoughts, notes, and sketches safe in durable notebooks made for everyday use. Designed
+                        for classrooms, offices, and personal journaling, our notebooks combine strength with style so
+                        you never lose an important idea again.</p>
+                    <a href="products.html" class="btn btn-warning">Shop Now</a>
+                </div>
                 <img src="./assets/land03.png" class="d-sm-block d-none w-100" alt="...">
                 <img src="./assets/image03.png" class="d-sm-none d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+            <i class="bi bi-arrow-left-circle-fill t"></i>
             <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+            <i class="bi bi-arrow-right-circle-fill text-"></i>
             <span class="visually-hidden">Next</span>
         </button>
+    </div>
+
+    <div class="container my-3">
+        <h1 class="text-center my-5">Our Trusted Brands</h1>
+
+        <div class="row g-4">
+            <div class="col-lg-2  col-4 d-flex justify-content-center align-items-center" >
+                <img src="./assets/Dollar.png" alt="" class="img-fluid rounded-circle" width="200px">
+            </div>
+            <div class="col-lg-2 col-4 d-flex justify-content-center align-items-center" >
+                <img src="./assets/pelikan.png" alt="" class="img-fluid rounded-circle" width="200px">
+            </div>
+            <div class="col-lg-2 col-4 d-flex justify-content-center align-items-center" >
+                <img src="./assets/pilot.png" alt="" class="img-fluid rounded-circle" width="200px">
+            </div>
+            <div class="col-lg-2 col-4 d-flex justify-content-center align-items-center" >
+                <img src="./assets/staedtler.png" alt="" class="img-fluid rounded-circle" width="200px">
+            </div>
+            <div class="col-lg-2 col-4 d-flex justify-content-center align-items-center" >
+                <img src="./assets/staples.png" alt="" class="img-fluid rounded-circle" width="200px">
+            </div>
+            <div class="col-lg-2 col-4 d-flex justify-content-center align-items-center" >
+                <img src="./assets/faber.png" alt="" class="img-fluid rounded-circle" width="200px">
+            </div>
     </div>
     <script src="./js/bootstrap.js"></script>
     <script src="./js/app.js"></script>

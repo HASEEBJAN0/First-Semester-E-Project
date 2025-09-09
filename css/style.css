@@ -68,7 +68,7 @@ form .bi {
 
 }
 .carousel-inner {
-    height: 80vh !important;
+    height: 100vh !important;
     /* border: 5px solid green; */
 }
 .carousel {
@@ -79,5 +79,10 @@ form .bi {
     width: 100% !important;
     height: 100% !important;
     /* border: 5px solid blue; */
+}
+.bi-arrow-left-circle-fill,.bi-arrow-right-circle-fill {
+    font-size: 2em;
+    /* color: orange; */
+    /* background-color: orange; */
 }
 
