@@ -1,88 +1,168 @@
 * {
-    font-family: "Roboto" !important;
+    font-family: "Space Grotesk" !important;
     font-optical-sizing: auto;
+    scroll-behavior: smooth;
 }
+
 .bg-body-tertiary {
     box-shadow: 2px 2px 15px 2px rgb(103, 102, 102);
     /* border-radius: 0px 0px 20px 20px; */
-    background-color: rgba(255, 255, 255, 0.5) !important;
+    /* background-color: rgba(255, 255, 255, 0.5) !important; */
+    background-color: rgba(156, 209, 255, 0.7) !important;
     backdrop-filter: blur(4px);
     transition: ease-in-out .2s;
-   
-    
-}
-.nav-link:hover {
-        /* border-radius: 20px; */
-        /* border: 2px solid; */
-        /* background-color: black; */
-        /* color: white;  */
-        font-weight: bold;
-        /* text-decoration: underline; */
-        transform: scale(1.15);
-        /* transition: linear .2s; */
-        transition: ease-in .2s;
-    }
+    font-size: 1.2em;
 
-    
-.navbar-brand{
+
+}
+
+.nav-link:hover {
+    transform: scale(.9);
+    transition: ease-in .2s;
+    background-color: #00b7ff;
+    color: #6003ff !important;
+    box-shadow: 2px 2px 2px 2px rgba(85, 142, 241, 0.791);
+}
+
+
+.navbar-brand {
     transform: scale(2);
 }
+
 .nav-link {
     /* transition: linear .2s; */
-    padding-right: 30px !important;
-    padding-left: 30px !important;
+    /* padding-right: 30px !important; */
+    margin: 0px 5px !important;
     margin-bottom: 0 !important;
+    color: #500f89 !important;
+    /* border-radius: 15px  0px; */
 }
-@media (max-width: 992px){
-    .nav-link{
-        border-bottom: 1px solid rgb(0, 0, 0);
+
+.btn-purple {
+    background-color: #ceeefb;
+    color: #6003ff !important;
+    border-radius: 10px 0px;
+
+}
+
+.btn-purple:hover {
+    transform: scale(.9);
+    transition: ease-out .2s;
+    background-color: #00b7ff;
+    color: #f5f3f7 !important;
+
+}
+
+@media (max-width: 992px) {
+    .nav-link {
+        border-bottom: 5px solid rgb(48, 27, 206);
         /* margin-bottom: 5px !important; */
     }
-    
+
 }
-.nav-link:hover{
-    /* border: none; */
-    transform: scale(1.01);
-    box-shadow: 2px 2px 2px 2px gray;
-}
-.navbar-toggler{
+
+.navbar-toggler {
     border: none !important;
 }
+
 .navbar-toggler:focus {
     box-shadow: none;
 }
-.bi-list{
-    font-size: 38px !important  ;
+
+.bi-list {
+    font-size: 38px !important;
 }
+
 .bi-x-lg {
     font-size: 28px !important;
 }
+
 form .bi {
     font-size: 1.7em;
     cursor: pointer;
 }
 
 .navbar-nav .dropdown-menu {
-    background-color: rgba(224, 220, 220, 0.8) !important;
-    backdrop-filter: blur(1px);
-
+    /* background-color: rgba(224, 220, 220, 0.8) !important;
+    backdrop-filter: blur(1px); */
+     background: none !important;
+    color: white !important;
+    text-align: center !important;
+    border-bottom: #6003ff 5px  solid;
 }
+
 .carousel-inner {
     height: 100vh !important;
     /* border: 5px solid green; */
 }
+
 .carousel {
     height: 100% !important;
     /* border: 5px solid red; */
+     
 }
-.carousel-item , .carousel-item img {
+
+.carousel-caption{
+    background-color: rgba(105, 182, 230, 0.469);
+     color: #1238a7 !important;
+     backdrop-filter: blur(3px);
+     border-radius: 20px;
+}
+.carousel-item,
+.carousel-item img {
     width: 100% !important;
     height: 100% !important;
     /* border: 5px solid blue; */
 }
-.bi-arrow-left-circle-fill,.bi-arrow-right-circle-fill {
+
+.bi-arrow-left-circle-fill,
+.bi-arrow-right-circle-fill {
     font-size: 2em;
-    /* color: orange; */
+    color: rgb(8, 4, 87);
     /* background-color: orange; */
 }
 
+.card {
+    height: 100% !important;
+    margin: 0% !important;
+    padding: 0% !important;
+    background-color: #cae6fc;
+    border: none;
+    box-shadow: 2px 2px 2px  2px rgb(53, 53, 53);
+    
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: justify;
+}
+
+.card:hover {
+    transform:scale(.9);
+    cursor: pointer;
+    transition: ease-in .3s;
+
+}
+
+.i {
+    font-style: italic;
+}
+
+.bg-color {
+    background: linear-gradient(to right,#60B5FF,#AFDDFF);
+}
+
+.color-bg {
+
+    background: linear-gradient(to left,#60B5FF,#AFDDFF);
+}
+
+body {
+    /* background-color: #e7dcfb; */
+    scroll-behavior: smooth;
+}
+.navbar-collapse {
+    max-height: 70vh !important;
+    overflow: auto;
+}
