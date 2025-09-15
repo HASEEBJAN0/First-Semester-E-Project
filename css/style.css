@@ -177,7 +177,7 @@ body {
 
 .dropdown-menu{
     text-align: center;
-    width: 200px;
+    width: auto;
     background-color: rgba(126, 213, 247, 0.5);
     transition: ease-in .5s;
     transform: translateY(10px);
