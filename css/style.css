@@ -85,12 +85,13 @@ form .bi {
 
 
 .carousel-inner {
-    height: 100vh !important;
     /* border: 5px solid green; */
+    height: 100% !important;
 }
 
 .carousel {
-    height: 100% !important;
+    height: 83vh !important;
+    /* top: 90px; */
     /* border: 5px solid red; */
 
 }
@@ -169,22 +170,42 @@ body {
         max-height: 70vh !important;
         overflow: auto;
     }
+    .carousel {
+    height: 50vh !important;
+    /* border: 5px solid red; */
+
+}
+    
 
 }
 
 
-
-
-.dropdown-menu{
-    text-align: center;
-    width: 200px;
+.dropdown-menu {
     background-color: rgba(126, 213, 247, 0.5);
-    transition: ease-in .5s;
-    transform: translateY(10px);
 }
 
+@media (min-width:992px) {
+    .dropdown-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: ease-in .3s;
+        
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        text-align: center;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
 
-
+        /* width: 200px; */
+        /* transition: ease-in .5s;
+        transform: translateY(10px); */
+    }
+    
+}
 .auto-show {
     animation: text-appear both;
     animation-timeline: view();
@@ -201,4 +222,10 @@ body {
 
     }
     
+}
+
+.ch-w {
+    width: 300px;
+    height: 150px;
+    border-radius: 20px;
 }
