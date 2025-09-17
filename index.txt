@@ -1,4 +1,0 @@
-data-bs-toggle="dropdown"
- aria-expanded="false"
- role="button"
- dropdown-toggle

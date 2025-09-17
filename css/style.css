@@ -180,7 +180,15 @@ body {
 }
 
 
+<<<<<<< HEAD
 .dropdown-menu {
+=======
+
+
+.dropdown-menu{
+    text-align: center;
+    width: auto;
+>>>>>>> 39219d82d74b73d1a608a339c32fbe43f266be0b
     background-color: rgba(126, 213, 247, 0.5);
 }
 
