@@ -1,13 +1,13 @@
 * {
-    font-family: "Space Grotesk" !important;
+    font-family: "Space Grotesk";
     font-optical-sizing: auto;
     scroll-behavior: smooth;
     box-sizing: border-box !important;
 }
-body {
-    background-color: #23bdfa;
+/* body {
+     background-color: #23bdfa; 
 
-}
+} */
 .bg-body-tertiary {
     box-shadow: 2px 2px 15px 2px rgb(103, 102, 102);
     /* border-radius: 0px 0px 20px 20px; */
@@ -16,7 +16,8 @@ body {
     backdrop-filter: blur(4px);
     transition: ease-in-out .2s;
     font-size: 1.2em;
-
+    /* position: fixed !important; */
+    /* top: 200px !important; */
 
 }
 
@@ -30,7 +31,10 @@ body {
 
 
 .navbar-brand {
-    transform: scale(2);
+    /* transform: scale(1); */
+    height: 100px !important;
+    margin: 0 !important;
+    padding: 0% !important;
 }
 
 .nav-link {
@@ -92,7 +96,10 @@ form .bi {
 
 .carousel {
     height: 83vh !important;
-    /* top: 90px; */
+    /* position: relative !important; */
+    /* top: 95px !important; */
+    /* z-index: 2; */
+    margin-top: 92px;
     /* border: 5px solid red; */
 
 }
@@ -145,6 +152,9 @@ form .bi {
 .i {
     font-style: italic;
 }
+i{
+    font-style: italic !important;
+}
 
 .bg-color {
     background: linear-gradient(to right, #60B5FF, #AFDDFF);
@@ -171,11 +181,21 @@ body {
         max-height: 70vh !important;
         overflow: auto;
     }
-    .carousel {
+    .first-carousel {
     height: 50vh !important;
     /* border: 5px solid red; */
 
 }
+.h-carousel{
+    height: 80vh !important;
+    margin: 0 !important;
+    background-color: rgba(125, 178, 231, 0.659);
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+   
+}
+
+
 
     
 
@@ -209,6 +229,13 @@ body {
          transition: ease-in .5s;
         transform: translateY(10px);
     }
+    .h-carousel{
+    height: 30vh !important;
+    margin-top: 0%;
+    background-color: rgba(125, 178, 231, 0.659);
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+}
     
 }
 .auto-show {
@@ -236,6 +263,19 @@ body {
     border-radius: 20px;
 }
 
-.h-carousel{
-    height: 30vh !important;
+.font {
+    font-family: serif !important;
+    text-align: center;
 }
+
+
+.btn-floating{
+    /* display: flex; */
+    /* flex-direction: column; */
+    border-radius: 50%;
+}
+footer .btn {
+    margin: 0;
+    padding: 0;
+}
+
