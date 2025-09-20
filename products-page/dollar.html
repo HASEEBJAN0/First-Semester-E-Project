@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dollar Products</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/9.2.0/mdb.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body class="body">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary w-100 position-fixed top-0 z-3" id="d-navbar">
+
+    </nav>
+    <section class="dollar-product-img d-flex  justify-content-center align-items-end product-img-section">
+        <div class=" w-50 text-center pt-3 mb-4 sec-div">
+            <h1 class="">Dollar Products</h1>
+            <p class="">Dollar is one of the leading stationery brands in Pakistan, trusted for its reliable pens, pencils, and colors. With affordable prices and durable quality, Dollar products have become a daily choice for students, teachers, and professionals alike</p>
+        </div>
+    </section>
+
+    <div class="container-fluid color-bg py-5  ">
+        <!-- <h2 class="text-center fs-1 py-4">Dollar Products</h2> -->
+        <h3 class="text-center fs-1 pb-5">Dollar Pens</h3>
+        <div class="row g-4" id="dollar-pen">
+        
+        </div>
+        <h3 class="text-center fs-1 py-4">Dollar Pencils</h3>
+        <div class="row g-4 mt-2" id="dollar-pencils">
+        
+        </div>
+        <h3 class="text-center fs-1 py-4">Dollar Colours</h3>
+        <div class="row g-4 mt-2" id="dollar-colours">
+        
+        </div>
+    </div>
+
+
+
+
+    <div class="container-fluid color-bg py-5" id="d-footer">
+        
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/9.2.0/mdb.umd.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/app.js"></script>
+    <script>
+        let btn = document.getElementsByClassName('navbar-toggler')[0];
+        let ham = document.getElementsByClassName('bi-list')[0];
+        let cross = document.getElementsByClassName('bi-x-lg')[0];
+        // console.log(btn)
+        btn.addEventListener('click', () => {
+            ham.classList.toggle('d-none')
+            cross.classList.toggle('d-none')
+        })
+    </script>
+</body>
+
+</html>

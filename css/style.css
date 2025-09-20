@@ -99,12 +99,12 @@ form .bi {
     /* position: relative !important; */
     /* top: 95px !important; */
     /* z-index: 2; */
-    margin-top: 92px;
+    margin-top: 110px;
     /* border: 5px solid red; */
 
 }
 
-.carousel-caption {
+.carousel-caption ,.sec-div {
     background-color: rgba(105, 182, 230, 0.469);
     color: #1238a7 !important;
     backdrop-filter: blur(3px);
@@ -139,11 +139,11 @@ form .bi {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    text-align: justify;
+    text-align: center;
 }
 
 .card:hover {
-    transform: scale(.9);
+    transform: scale(1.05);
     cursor: pointer;
     transition: ease-in .3s;
 
@@ -187,7 +187,7 @@ body {
 
 }
 .h-carousel{
-    height: 80vh !important;
+    height: 50vh !important;
     margin: 0 !important;
     background-color: rgba(125, 178, 231, 0.659);
     border-radius: 20px;
@@ -279,3 +279,17 @@ footer .btn {
     padding: 0;
 }
 
+.margin {
+    margin-top: 110px;
+}
+.dollar-product-img {
+    background-image: url(../assets/dollar-page-img.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.product-img-section {
+    height: 80vh;
+    margin-top: 110px;
+
+}
