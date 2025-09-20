@@ -92,7 +92,7 @@ if (featuredContainer) {
   let html = "";
   for (let i = 0; i < featuredProducts.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6">
+      <div class="col-md-3 col-sm-6 auto-show">
         <div class="card">
           <img src="${featuredProducts[i].image}" class="card-img-top" alt="">
           <div class="card-body">
