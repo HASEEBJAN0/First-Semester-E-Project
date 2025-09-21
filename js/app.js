@@ -85,7 +85,8 @@ let featuredProducts = [
   }
 
 ];
-
+ 
+        // featuredProducts
 
 let featuredContainer = document.getElementById("Featured-cards");
 if (featuredContainer) {
@@ -94,12 +95,15 @@ if (featuredContainer) {
     html += `
       <div class="col-md-3 col-sm-6 auto-show">
         <div class="card">
-          <img src="${featuredProducts[i].image}" class="card-img-top" alt="">
+          <img src="${featuredProducts[i].image}" class="card-img-top img-fluid" alt="">
           <div class="card-body">
             <h5>${featuredProducts[i].title}</h5>
-            <p>${featuredProducts[i].text}</p>
+            
             <p>${featuredProducts[i].price}</p>
-            <a href="#" class="btn btn-primary">${featuredProducts[i].button}</a>
+            <div>
+            <a href="#" class="btn btn-info">${featuredProducts[i].button}</a>
+            <a href="#" class="btn btn-primary">Add To Cart</a>
+            </div>
           </div>
         </div>
       </div>`;
@@ -109,12 +113,14 @@ if (featuredContainer) {
 
 
 
-    //   Navbar
+                  //   Navbar
 
-document.getElementById('d-navbar').innerHTML = `
-<div class="container">
-            <a class="navbar-brand" href="./index.html">
-                <img src="../assets/logo.png" alt="" class="img-fluid" width="100px" height="50px">
+let navbar = document.getElementById('d-navbar');
+if (navbar) {
+  navbar.innerHTML = `
+<div class="container-fluid">
+            <a class="navbar-brand " href="./index.html">
+                <img src="../assets/logo.png" alt="" class="img-fluid ms-3" width="100px" height="50px">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -169,20 +175,25 @@ document.getElementById('d-navbar').innerHTML = `
                         <a class="nav-link " href="./about.html">About Us</a>
                     </li>
                 </ul>
-                <form class="w-25 d-flex justify-content-around d-lg-block d-none">
-                    <button class="btn btn-purple btn-lg  ">Login</button>
+                <form class=" me-3 d-lg-block d-none">
+                    <button class="btn btn-purple btn-lg ">Login</button>
                     <button class="btn btn-purple btn-lg ">Signup</button>
                 </form>
             </div>
 `
+}
 
 
 
-//     Footer
+          //     Footer
+
+let footer = document.getElementById('d-footer');
+
+if(footer) {
 
 
 
-document.getElementById('d-footer').innerHTML = `
+footer.innerHTML = `
 <footer class="text-center text-lg-start auto-show">
             <div class="container p- pb-0">
                 <!-- Section: Links -->
@@ -308,9 +319,9 @@ document.getElementById('d-footer').innerHTML = `
             <!-- Grid container -->
         </footer>
         `
+}
 
-
-        // Dollar Cards
+     // Dollar Cards
 
 
 
@@ -521,70 +532,518 @@ let dollarProducts = {
 let dollarPen = document.getElementById('dollar-pen')
 let dollarPencil = document.getElementById('dollar-pencils')
 let dollarColour = document.getElementById('dollar-colours')
- if(dollarPen){
+if (dollarPen) {
   let html = '';
-  for(var i = 0; i < dollarProducts.pens.length ; i++){
-  html += `
+  for (var i = 0; i < dollarProducts.pens.length; i++) {
+    html += `
       <div class="col-md-3 col-sm-6 auto-show">
         <div class="card">
-          <img src=${dollarProducts.pens[i].image} class="card-img-top" alt="">
+          <img src=${dollarProducts.pens[i].image} class="card-img-top img-fluid" alt="">
           <div class="card-body">
             <h5>${dollarProducts.pens[i].title}</h5>
-            <p>${dollarProducts.pens[i].text}</p>
             <p>${dollarProducts.pens[i].price}</p>
+            <div>
             <a href="#" class="btn btn-info">${dollarProducts.pens[i].button}</a>
-            <a href="#" class="btn btn-primary mt-1">${dollarProducts.pens[i].addToCart}</a>
+            <a href="#" class="btn btn-primary ">${dollarProducts.pens[i].addToCart}</a>
+            </div>
           </div>
         </div>
-      </div>`; 
-    
+      </div>`;
+
   }
   dollarPen.innerHTML = html
- }
- if(dollarPencil){
+}
+if (dollarPencil) {
   let html = '';
-  for(var i = 0; i < dollarProducts.pencils.length ; i++){
-  html += `
+  for (var i = 0; i < dollarProducts.pencils.length; i++) {
+    html += `
       <div class="col-md-3 col-sm-6 auto-show">
         <div class="card">
-          <img src=${dollarProducts.pencils[i].image} class="card-img-top" alt="">
+          <img src=${dollarProducts.pencils[i].image} class="card-img-top img-fluid" alt="">
           <div class="card-body">
             <h5>${dollarProducts.pencils[i].title}</h5>
-            <p>${dollarProducts.pencils[i].text}</p>
             <p>${dollarProducts.pencils[i].price}</p>
+            <div>
             <a href="#" class="btn btn-info">${dollarProducts.pencils[i].button}</a>
-            <a href="#" class="btn btn-primary mt-1">${dollarProducts.pencils[i].addToCart}</a>
+            <a href="#" class="btn btn-primary ">${dollarProducts.pencils[i].addToCart}</a>
+            </div>
           </div>
         </div>
-      </div>`; 
-    
+      </div>`;
+
   }
   dollarPencil.innerHTML = html
- }
- if(dollarColour){
+}
+if (dollarColour) {
   let html = '';
-  for(var i = 0; i < dollarProducts.pencils.length ; i++){
-  html += `
+  for (var i = 0; i < dollarProducts.pencils.length; i++) {
+    html += `
       <div class="col-md-3 col-sm-6 auto-show">
-        <div class="card">
+        <div class="card ">
           <img src=${dollarProducts.colors[i].image} class="card-img-top" alt="">
-          <div class="card-body">
+          <div class="card-body h-75">
             <h5>${dollarProducts.colors[i].title}</h5>
-            <p>${dollarProducts.colors[i].text}</p>
             <p>${dollarProducts.colors[i].price}</p>
+            <div>
             <a href="#" class="btn btn-info">${dollarProducts.colors[i].button}</a>
-            <a href="#" class="btn btn-primary mt-1">${dollarProducts.colors[i].addToCart}</a>
+            <a href="#" class="btn btn-primary ">${dollarProducts.colors[i].addToCart}</a>
+            </div>
           </div>
         </div>
-      </div>`; 
-    
+      </div>`;
+
   }
   dollarColour.innerHTML = html
- }
+}
+
+      // staplesProducts
+
+let staplesProducts = {
+  notebooks: [
+    {
+      title: "Staples Spiral Notebook",
+      text: "Durable spiral binding, smooth pages for school and office.",
+      price: "Rs. 250",
+      image: "../assets/st-img.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Ruled Notebook",
+      text: "Lined pages for neat writing, sturdy cover for daily use.",
+      price: "Rs. 220",
+      image: "../assets/st-img2.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Hard Cover Notebook",
+      text: "Strong hardcover design, long-lasting and easy to carry.",
+      price: "Rs. 350",
+      image: "../assets/st-img3.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Graph Notebook",
+      text: "Perfect for math and engineering notes with grid pages.",
+      price: "Rs. 300",
+      image: "../assets/st-img4.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Pocket Notebook",
+      text: "Compact size, easy to carry for quick notes anywhere.",
+      price: "Rs. 150",
+      image: "../assets/st-img5.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Eco Notebook",
+      text: "Made from recycled paper, eco-friendly and durable.",
+      price: "Rs. 280",
+      image: "../assets/st-img6.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Soft Cover Notebook",
+      text: "Flexible soft cover, smooth pages for writing comfort.",
+      price: "Rs. 200",
+      image: "../assets/st-img7.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Jumbo Notebook",
+      text: "Extra pages for long-term use, perfect for projects.",
+      price: "Rs. 400",
+      image: "../assets/st-img2.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    }
+  ],
+
+  files: [
+    {
+      title: "Staples Ring File",
+      text: "Durable ring file, secure binding for office documents.",
+      price: "Rs. 180",
+      image: "../assets/st-img8.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Clear File",
+      text: "Transparent file for keeping school notes neat and safe.",
+      price: "Rs. 160",
+      image: "../assets/st-img9.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Hard File",
+      text: "Tough cover file for long-lasting protection of papers.",
+      price: "Rs. 250",
+      image: "../assets/st-img10.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Clip File",
+      text: "Easy clip system for quick arrangement of documents.",
+      price: "Rs. 200",
+      image: "../assets/st-img11.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Plastic File",
+      text: "Lightweight plastic file, great for students and office.",
+      price: "Rs. 120",
+      image: "../assets/st-img8.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Project File",
+      text: "Ideal for presentations and assignments, sleek design.",
+      price: "Rs. 300",
+      image: "../assets/st-img10.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Button File",
+      text: "Plastic button closure file, safe storage for papers.",
+      price: "Rs. 140",
+      image: "../assets/st-img9.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Display File",
+      text: "Multi-sheet display file for project and report work.",
+      price: "Rs. 280",
+      image: "../assets/st-img11.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    }
+  ],
+
+  staplers: [
+    {
+      title: "Staples Mini Stapler",
+      text: "Compact stapler, lightweight design for student use.",
+      price: "Rs. 100",
+      image: "../assets/st-img12.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Standard Stapler",
+      text: "Reliable stapler for home, school and office documents.",
+      price: "Rs. 180",
+      image: "../assets/st-img13.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Heavy Duty Stapler",
+      text: "Strong stapler for bulk documents, office essential tool.",
+      price: "Rs. 450",
+      image: "../assets/st-img14.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Color Stapler",
+      text: "Attractive colorful stapler, adds style to stationery kit.",
+      price: "Rs. 200",
+      image: "../assets/st-img15.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Desk Stapler",
+      text: "Durable desk stapler, long-lasting metal body design.",
+      price: "Rs. 300",
+      image: "../assets/st-img16.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Classic Stapler",
+      text: "Simple and sturdy stapler for everyday school use.",
+      price: "Rs. 160",
+      image: "../assets/st-img17.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Office Stapler",
+      text: "Smooth stapling action, perfect for office work.",
+      price: "Rs. 280",
+      image: "../assets/st-img15.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Staples Jumbo Stapler",
+      text: "Large stapler for projects, handles extra thick stacks.",
+      price: "Rs. 500",
+      image: "../assets/st-img14.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    }
+  ]
+};
+
+let stapleNoteBook = document.getElementById('staples-notebook')
+let stapleFile = document.getElementById('staples-files')
+let stapleStapler = document.getElementById('staples-staplers')
 
 
+if (stapleNoteBook) {
+  let html = '';
+  for (var i = 0; i < staplesProducts.notebooks.length; i++) {
+    html += `
+      <div class="col-md-3 col-sm-6 auto-show">
+        <div class="card">
+          <img src=${staplesProducts.notebooks[i].image} class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5>${staplesProducts.notebooks[i].title}</h5>
+            <p>${staplesProducts.notebooks[i].price}</p>
+            <div>
+            <a href="#" class="btn btn-info">${staplesProducts.notebooks[i].button}</a>
+            <a href="#" class="btn btn-primary">${staplesProducts.notebooks[i].addToCart}</a>
+            </div>
+          </div>
+        </div>
+      </div>`;
+
+  }
+  stapleNoteBook.innerHTML = html
+}
+
+if (stapleFile) {
+  let html = '';
+  for (var i = 0; i < staplesProducts.files.length; i++) {
+    html += `
+      <div class="col-md-3 col-sm-6 auto-show ">
+        <div class="card">
+          <img src=${staplesProducts.files[i].image} class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5>${staplesProducts.files[i].title}</h5>
+            <p>${staplesProducts.files[i].price}</p>
+            <div>
+            <a href="#" class="btn btn-info">${staplesProducts.files[i].button}</a>
+            <a href="#" class="btn btn-primary">${staplesProducts.files[i].addToCart}</a>
+            </div>
+          </div>
+        </div>
+      </div>`;
+
+  }
+  stapleFile.innerHTML = html
+}
+if (stapleStapler) {
+  let html = '';
+  for (var i = 0; i < staplesProducts.staplers.length; i++) {
+    html += `
+      <div class="col-md-3 col-sm-6 auto-show">
+        <div class="card">
+          <img src=${staplesProducts.staplers[i].image} class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5>${staplesProducts.staplers[i].title}</h5>
+            <p>${staplesProducts.staplers[i].price}</p>
+            <div>
+            <a href="#" class="btn btn-info">${staplesProducts.staplers[i].button}</a>
+            <a href="#" class="btn btn-primary ">${staplesProducts.staplers[i].addToCart}</a>
+            </div>
+          </div>
+        </div>
+      </div>`;
+
+  }
+  stapleStapler.innerHTML = html
+}
+
+let faberCastellProducts = {
+  pencils: [
+    {
+      title: "Faber-Castell HB Pencil",
+      text: "Classic HB wooden pencil, smooth writing for daily use.",
+      price: "Rs. 40",
+      image: "../assets/fc-img.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Faber-Castell Grip Pencil",
+      text: "Ergonomic grip pencil, comfortable for long writing sessions.",
+      price: "Rs. 80",
+      image: "../assets/fc-img1.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Faber-Castell Colored Pencil",
+      text: "Bright colors, smooth shading, perfect for school art projects.",
+      price: "Rs. 350",
+      image: "../assets/fc-img2.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Faber-Castell Eco Pencil",
+      text: "Made from sustainable wood, eco-friendly and reliable.",
+      price: "Rs. 60",
+      image: "../assets/fc-img3.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    }
+  ],
+
+  pens: [
+    {
+      title: "Faber-Castell Ball Pen",
+      text: "Smooth ballpoint pen, perfect for school and office writing.",
+      price: "Rs. 70",
+      image: "../assets/fc-img6.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Faber-Castell Gel Pen",
+      text: "Premium gel ink pen, bold writing for everyday notes.",
+      price: "Rs. 120",
+      image: "../assets/fc-img5.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Faber-Castell Fountain Pen",
+      text: "Elegant fountain pen, refillable design, smooth nib.",
+      price: "Rs. 500",
+      image: "../assets/fc-img4.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Faber-Castell Grip Pen",
+      text: "Comfortable grip pen for long writing without hand strain.",
+      price: "Rs. 150",
+      image: "../assets/fc-img7.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    }
+  ],
+
+  colors: [
+    {
+      title: "Faber-Castell Crayons",
+      text: "Durable wax crayons, non-toxic, great for kids artwork.",
+      price: "Rs. 200",
+      image: "../assets/fc-img8.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Faber-Castell Oil Pastels",
+      text: "Smooth oil pastels, vibrant shades for artistic projects.",
+      price: "Rs. 280",
+      image: "../assets/fc-img9.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Faber-Castell Watercolors",
+      text: "High quality watercolor set with bright, lasting colors.",
+      price: "Rs. 500",
+      image: "../assets/fc-img10.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    },
+    {
+      title: "Faber-Castell Markers",
+      text: "Bold tip markers, smooth flow, perfect for projects.",
+      price: "Rs. 250",
+      image: "../assets/fc-img11.png",
+      button: "View Details",
+      addToCart: "Add to Cart"
+    }
+  ]
+};
 
 
+let faberPen = document.getElementById('faber-pen')
+let faberPencil = document.getElementById('faber-pencil')
+let fabercolor = document.getElementById('faber-colours')
 
 
+if (faberPen) {
+  let html = '';
+ for(var i = 0 ;i < faberCastellProducts.pens.length; i++) {
+    html += `
+      <div class="col-md-3 col-sm-6 auto-show ">
+        <div class="card">
+          <img src=${faberCastellProducts.pens[i].image} class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5>${faberCastellProducts.pens[i].title}</h5>
+            <p>${faberCastellProducts.pens[i].price}</p>
+            <div>
+            <a href="#" class="btn btn-info">${faberCastellProducts.pens[i].button}</a>
+            <a href="#" class="btn btn-primary">${faberCastellProducts.pens[i].addToCart}</a>
+            </div>
+          </div>
+        </div>
+      </div>`;
 
+  }
+  faberPen.innerHTML = html
+}
+if (faberPencil) {
+  let html = '';
+  for (var i = 0; i < faberCastellProducts.pencils.length; i++) {
+    html += `
+      <div class="col-md-3 col-sm-6 auto-show">
+        <div class="card">
+          <img src=${faberCastellProducts.pencils[i].image} class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5>${faberCastellProducts.pencils[i].title}</h5>
+            <p>${faberCastellProducts.pencils[i].price}</p>
+            <div>
+            <a href="#" class="btn btn-info">${faberCastellProducts.pencils[i].button}</a>
+            <a href="#" class="btn btn-primary ">${faberCastellProducts.pencils[i].addToCart}</a>
+            </div>
+          </div>
+        </div>
+      </div>`;
+
+  }
+  faberPencil.innerHTML = html
+}
+if (fabercolor) {
+  let html = '';
+  for (var i = 0; i < faberCastellProducts.colors.length; i++) {
+    html += `
+      <div class="col-md-3 col-sm-6 auto-show">
+        <div class="card">
+          <img src=${faberCastellProducts.colors[i].image} class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5>${faberCastellProducts.colors[i].title}</h5>
+            <p>${faberCastellProducts.colors[i].price}</p>
+            <div>
+            <a href="#" class="btn btn-info">${faberCastellProducts.colors[i].button}</a>
+            <a href="#" class="btn btn-primary ">${faberCastellProducts.colors[i].addToCart}</a>
+            </div>
+          </div>
+        </div>
+      </div>`;
+
+  }
+  fabercolor.innerHTML = html
+}

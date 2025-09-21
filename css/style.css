@@ -4,17 +4,18 @@
     scroll-behavior: smooth;
     box-sizing: border-box !important;
 }
-/* body {
-     background-color: #23bdfa; 
+body {
+     /* background-color: #23bdfa;  */
+      transition: linear .2s;
 
-} */
+}
 .bg-body-tertiary {
     box-shadow: 2px 2px 15px 2px rgb(103, 102, 102);
     /* border-radius: 0px 0px 20px 20px; */
     /* background-color: rgba(255, 255, 255, 0.5) !important; */
     background-color: rgba(156, 209, 255, 0.7) !important;
     backdrop-filter: blur(4px);
-    transition: ease-in-out .2s;
+   
     font-size: 1.2em;
     /* position: fixed !important; */
     /* top: 200px !important; */
@@ -46,10 +47,6 @@
     /* border-radius: 15px  0px; */
 }
 
-.dropdown-menu[open] {
-    /* transition: ease-in 5s; */
-    background: red !important;
-}
 
 .btn-purple {
     background-color: #ceeefb;
@@ -129,21 +126,33 @@ form .bi {
     height: 100% !important;
     margin: 0% !important;
     padding: 0% !important;
-    background-color: #cae6fc;
+    /* background-color: #cae6fc; */
+    background-color: #ffffff;
     border: none;
     box-shadow: 2px 2px 2px 2px rgb(53, 53, 53);
-
+    perspective: 500px; 
+  transform-style: preserve-3d;
+  overflow: hidden;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
 }
+/* .f-card{
+    height: 100% !important;
+} */
 
 .card-body {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
 }
 
-.card:hover {
-    transform: scale(1.05);
+.card img:hover {
+    /* transform: translateZ(10px); */
+    transform:translateZ(20px);
+    /* transform: scale(1.05); */
+    
     cursor: pointer;
     transition: ease-in .3s;
 
@@ -194,8 +203,12 @@ body {
     backdrop-filter: blur(3px);
    
 }
-
-
+.w{
+    width: 100% !important;
+}
+.product-img-section{
+    height: 50vh !important;
+}
 
     
 
@@ -203,8 +216,13 @@ body {
 
 
 .dropdown-menu{
-    background-color: rgba(0, 183, 255,.5);
+    /* background-color: rgb(145, 211, 249); */
+    /* backdrop-filter: invert(80%); */
     text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: 2px 2px 3px  rgb(103, 102, 102);
 }
 
 
@@ -212,21 +230,20 @@ body {
 
 @media (min-width:992px) {
     .dropdown-menu {
+        width: 200px;
         display: block;
         opacity: 0;
         visibility: hidden;
         transform: translateY(10px);
-        transition: ease-in .3s;
+        transition: ease-in .1s;
         
     }
     
     .dropdown:hover .dropdown-menu {
         opacity: 1;
         visibility: visible;
-        transform: translateY(0px);
-
-        width: 200px; 
-         transition: ease-in .5s;
+        transform: translateY(0px); 
+         transition: ease-in .1s;
         transform: translateY(10px);
     }
     .h-carousel{
@@ -282,8 +299,16 @@ footer .btn {
 .margin {
     margin-top: 110px;
 }
-.dollar-product-img {
+.dollar{
     background-image: url(../assets/dollar-page-img.png);
+} 
+.staples {
+    background-image: url(../assets/staples-page-img.png);
+}
+.faber {
+    background-image: url(../assets/faber-page-img.png);
+}
+.product-img {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
