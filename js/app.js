@@ -1047,3 +1047,280 @@ if (fabercolor) {
   }
   fabercolor.innerHTML = html
 }
+
+
+
+        // Pelikan 
+let pelikanProducts = {
+  pencils: [
+    { title: "Pelikan HB Pencil", text: "Smooth HB pencil ideal for students and professionals.", price: "Rs. 40", image: "../assets/pl-img1.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Pelikan Exam Pencil", text: "Durable pencil made for long exam writing sessions.", price: "Rs. 50", image: "../assets/pl-img2.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Pelikan Drawing Pencil", text: "High quality pencil for sketching and shading.", price: "Rs. 70", image: "../assets/pl-img3.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Pelikan Grip Pencil", text: "Ergonomic grip for comfort in long use.", price: "Rs. 80", image: "../assets/pl-img4.png", button: "View Details", addToCart: "Add to Cart" }
+  ],
+  pens: [
+    { title: "Pelikan Ball Pen", text: "Classic smooth writing ball pen.", price: "Rs. 150", image: "../assets/pl-img5.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Pelikan Gel Pen", text: "Premium gel pen for bold writing.", price: "Rs. 200", image: "../assets/pl-img6.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Pelikan Fountain Pen", text: "Elegant design with smooth ink flow.", price: "Rs. 2,500", image: "../assets/pl-img7.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Pelikan Ink Pen", text: "Refillable ink pen for everyday use.", price: "Rs. 600", image: "../assets/pl-img8.png", button: "View Details", addToCart: "Add to Cart" }
+  ],
+  colors: [
+    { title: "Pelikan Crayons", text: "Bright crayons set for kids and school work.", price: "Rs. 300", image: "../assets/pl-img9.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Pelikan Oil Pastels", text: "Smooth oil pastels, vibrant shades.", price: "Rs. 400", image: "../assets/pl-img10.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Pelikan Poster Colors", text: "Water-based poster paints for art.", price: "Rs. 450", image: "../assets/pl-img11.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Pelikan Markers", text: "Bold tip markers for school projects.", price: "Rs. 500", image: "../assets/pl-img12.png", button: "View Details", addToCart: "Add to Cart" }
+  ]
+};
+
+let pelikanPen = document.getElementById('pelikan-pen');
+let pelikanPencil = document.getElementById('pelikan-pencil');
+let pelikanColor = document.getElementById('pelikan-colours');
+
+if (pelikanPen) {
+  let html = '';
+  for (let i = 0; i < pelikanProducts.pens.length; i++) {
+    html += `
+      <div class="col-md-3 col-sm-6">
+        <div class="card">
+          <img src=${pelikanProducts.pens[i].image} class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5>${pelikanProducts.pens[i].title}</h5>
+            <p>${pelikanProducts.pens[i].price}</p>
+            <div>
+            <a href="#" class="btn btn-info">${pelikanProducts.pens[i].button}</a>
+            <a href="#" class="btn btn-primary">${pelikanProducts.pens[i].addToCart}</a>
+            </div>
+          </div>
+        </div>
+      </div>`;
+  }
+  pelikanPen.innerHTML = html;
+}
+
+if (pelikanPencil) {
+  let html = '';
+  for (let i = 0; i < pelikanProducts.pencils.length; i++) {
+    html += `
+      <div class="col-md-3 col-sm-6">
+        <div class="card">
+          <img src=${pelikanProducts.pencils[i].image} class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5>${pelikanProducts.pencils[i].title}</h5>
+            <p>${pelikanProducts.pencils[i].price}</p>
+            <div>
+            <a href="#" class="btn btn-info">${pelikanProducts.pencils[i].button}</a>
+            <a href="#" class="btn btn-primary">${pelikanProducts.pencils[i].addToCart}</a>
+            </div>
+          </div>
+        </div>
+      </div>`;
+  }
+  pelikanPencil.innerHTML = html;
+}
+
+if (pelikanColor) {
+  let html = '';
+  for (let i = 0; i < pelikanProducts.colors.length; i++) {
+    html += `
+      <div class="col-md-3 col-sm-6">
+        <div class="card">
+          <img src=${pelikanProducts.colors[i].image} class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5>${pelikanProducts.colors[i].title}</h5>
+            <p>${pelikanProducts.colors[i].price}</p>
+            <div>
+            <a href="#" class="btn btn-info">${pelikanProducts.colors[i].button}</a>
+            <a href="#" class="btn btn-primary">${pelikanProducts.colors[i].addToCart}</a>
+            </div>
+          </div>
+        </div>
+      </div>`;
+  }
+  pelikanColor.innerHTML = html;
+}
+
+
+  //  Pilot products
+
+
+  let pilotProducts = {
+  pencils: [
+    { title: "Pilot Super Grip Pencil", text: "Mechanical pencil with comfortable rubber grip.", price: "Rs. 300", image: "../assets/pi-img1.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Pilot Neon Pencil", text: "Bright neon body pencil, smooth writing lead.", price: "Rs. 150", image: "../assets/pi-img2.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Pilot Exam Pencil", text: "Durable pencil designed for long exam sessions.", price: "Rs. 120", image: "../assets/pi-img3.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Pilot Graphite Pencil", text: "Dark graphite pencil for clean and sharp notes.", price: "Rs. 200", image: "../assets/pi-img4.png", button: "View Details", addToCart: "Add to Cart" }
+  ],
+  pens: [
+    { title: "Pilot G2 Gel Pen", text: "Premium gel pen with bold ink and smooth writing.", price: "Rs. 250", image: "../assets/pi-img5.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Pilot V7 Hi-Tecpoint", text: "Needle tip pen for precision writing and notes.", price: "Rs. 400", image: "../assets/pi-img6.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Pilot Fountain Pen", text: "Refillable fountain pen, elegant and smooth nib.", price: "Rs. 1,200", image: "../assets/pi-img7.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Pilot Acroball Pen", text: "Hybrid ink pen with excellent grip and smooth flow.", price: "Rs. 500", image: "../assets/pi-img8.png", button: "View Details", addToCart: "Add to Cart" }
+  ],
+  colors: [
+    { title: "Pilot Whiteboard Marker", text: "Bold ink marker, easy erasable on whiteboards.", price: "Rs. 350", image: "../assets/pi-img9.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Pilot Permanent Marker", text: "Durable ink marker for long-lasting marks.", price: "Rs. 280", image: "../assets/pi-img10.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Pilot Highlighter", text: "Bright fluorescent highlighter for study notes.", price: "Rs. 150", image: "../assets/pi-img11.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Pilot Color Pens", text: "Set of color pens, smooth ink for projects.", price: "Rs. 600", image: "../assets/pi-img12.png", button: "View Details", addToCart: "Add to Cart" }
+  ]
+};
+
+let pilotPen = document.getElementById('pilot-pen');
+let pilotPencil = document.getElementById('pilot-pencil');
+let pilotColor = document.getElementById('pilot-colours');
+
+if (pilotPen) {
+  let html = '';
+  for (let i = 0; i < pilotProducts.pens.length; i++) {
+    html += `
+      <div class="col-md-3 col-sm-6">
+        <div class="card">
+          <img src=${pilotProducts.pens[i].image} class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5>${pilotProducts.pens[i].title}</h5>
+            <p>${pilotProducts.pens[i].price}</p>
+            <div>
+            <a href="#" class="btn btn-info">${pilotProducts.pens[i].button}</a>
+            <a href="#" class="btn btn-primary">${pilotProducts.pens[i].addToCart}</a>
+            </div>
+          </div>
+        </div>
+      </div>`;
+  }
+  pilotPen.innerHTML = html;
+}
+
+if (pilotPencil) {
+  let html = '';
+  for (let i = 0; i < pilotProducts.pencils.length; i++) {
+    html += `
+      <div class="col-md-3 col-sm-6">
+        <div class="card">
+          <img src=${pilotProducts.pencils[i].image} class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5>${pilotProducts.pencils[i].title}</h5>
+            <p>${pilotProducts.pencils[i].price}</p>
+            <div>
+            <a href="#" class="btn btn-info">${pilotProducts.pencils[i].button}</a>
+            <a href="#" class="btn btn-primary">${pilotProducts.pencils[i].addToCart}</a>
+            </div>
+          </div>
+        </div>
+      </div>`;
+  }
+  pilotPencil.innerHTML = html;
+}
+
+if (pilotColor) {
+  let html = '';
+  for (let i = 0; i < pilotProducts.colors.length; i++) {
+    html += `
+      <div class="col-md-3 col-sm-6">
+        <div class="card">
+          <img src=${pilotProducts.colors[i].image} class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5>${pilotProducts.colors[i].title}</h5>
+            <p>${pilotProducts.colors[i].price}</p>
+            <div>
+            <a href="#" class="btn btn-info">${pilotProducts.colors[i].button}</a>
+            <a href="#" class="btn btn-primary">${pilotProducts.colors[i].addToCart}</a>
+            </div>
+          </div>
+        </div>
+      </div>`;
+  }
+  pilotColor.innerHTML = html;
+}
+
+
+
+
+    // Staedtler products
+
+    let staedtlerProducts = {
+  pencils: [
+    { title: "Staedtler Norica Pencil", text: "Durable HB pencil, smooth graphite for writing.", price: "Rs. 50", image: "../assets/st-img1.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Staedtler Mars Pencil", text: "Professional grade pencil, perfect for drawing.", price: "Rs. 100", image: "../assets/st-img2.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Staedtler Triangular Pencil", text: "Ergonomic triangular body for easy grip.", price: "Rs. 70", image: "../assets/st-img3.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Staedtler Jumbo Pencil", text: "Thick body pencil, ideal for beginners.", price: "Rs. 90", image: "../assets/st-img4.png", button: "View Details", addToCart: "Add to Cart" }
+  ],
+  pens: [
+    { title: "Staedtler Ball Pen", text: "Smooth ballpoint pen for daily school and office.", price: "Rs. 200", image: "../assets/st-img5.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Staedtler Gel Pen", text: "Bold gel ink, comfortable grip for long writing.", price: "Rs. 300", image: "../assets/st-img6.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Staedtler Fountain Pen", text: "Classic fountain pen, durable and refillable.", price: "Rs. 1,500", image: "../assets/st-img7.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Staedtler Triplus Pen", text: "Ergonomic pen with triangular grip design.", price: "Rs. 400", image: "../assets/st-img8.png", button: "View Details", addToCart: "Add to Cart" }
+  ],
+  colors: [
+    { title: "Staedtler Color Pencils", text: "Set of bright colored pencils for artwork.", price: "Rs. 600", image: "../assets/st-img9.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Staedtler Crayons", text: "Durable wax crayons, safe and vibrant colors.", price: "Rs. 250", image: "../assets/st-img10.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Staedtler Markers", text: "Bold markers set, smooth ink flow for projects.", price: "Rs. 500", image: "../assets/st-img11.png", button: "View Details", addToCart: "Add to Cart" },
+    { title: "Staedtler Highlighters", text: "Bright highlighters for study and office notes.", price: "Rs. 350", image: "../assets/st-img12.png", button: "View Details", addToCart: "Add to Cart" }
+  ]
+};
+
+let staedtlerPen = document.getElementById('staedtler-pen');
+let staedtlerPencil = document.getElementById('staedtler-pencil');
+let staedtlerColor = document.getElementById('staedtler-colours');
+
+if (staedtlerPen) {
+  let html = '';
+  for (let i = 0; i < staedtlerProducts.pens.length; i++) {
+    html += `
+      <div class="col-md-3 col-sm-6">
+        <div class="card">
+          <img src=${staedtlerProducts.pens[i].image} class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5>${staedtlerProducts.pens[i].title}</h5>
+            <p>${staedtlerProducts.pens[i].price}</p>
+            <div>
+              <a href="#" class="btn btn-info">${staedtlerProducts.pens[i].button}</a>
+              <a href="#" class="btn btn-primary">${staedtlerProducts.pens[i].addToCart}</a>
+            </div>
+          </div>
+        </div>
+      </div>`;
+  }
+  staedtlerPen.innerHTML = html;
+}
+
+if (staedtlerPencil) {
+  let html = '';
+  for (let i = 0; i < staedtlerProducts.pencils.length; i++) {
+    html += `
+      <div class="col-md-3 col-sm-6">
+        <div class="card">
+          <img src=${staedtlerProducts.pencils[i].image} class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5>${staedtlerProducts.pencils[i].title}</h5>
+            <p>${staedtlerProducts.pencils[i].price}</p>
+            <div>
+              <a href="#" class="btn btn-info">${staedtlerProducts.pencils[i].button}</a>
+              <a href="#" class="btn btn-primary">${staedtlerProducts.pencils[i].addToCart}</a>
+            </div>
+          </div>
+        </div>
+      </div>`;
+  }
+  staedtlerPencil.innerHTML = html;
+}
+
+if (staedtlerColor) {
+  let html = '';
+  for (let i = 0; i < staedtlerProducts.colors.length; i++) {
+    html += `
+      <div class="col-md-3 col-sm-6">
+        <div class="card">
+          <img src=${staedtlerProducts.colors[i].image} class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5>${staedtlerProducts.colors[i].title}</h5>
+            <p>${staedtlerProducts.colors[i].price}</p>
+            <div>
+              <a href="#" class="btn btn-info">${staedtlerProducts.colors[i].button}</a>
+              <a href="#" class="btn btn-primary">${staedtlerProducts.colors[i].addToCart}</a>
+            </div>
+          </div>
+        </div>
+      </div>`;
+  }
+  staedtlerColor.innerHTML = html;
+}
+  
