@@ -80,7 +80,7 @@
         <form>
           <div class="mb-3">
             <label for="name" >Your Name</label>
-            <input id="name" name="name" class="form-control" required placeholder="Name">
+            <input type="text" name="name" pattern="[A,Za,z]{4,}" class="form-control" required placeholder="Name">
           </div>
 
           <div class="mb-3">
@@ -99,7 +99,7 @@
           </div>
 
           <div>
-            <button type="submit" class="btn btn-primary me-3">Send Message</button>
+            <a type="submit" class="btn btn-primary me-3" href="mailto: universalstationer@gmail.com">Send Message</a>
             <button type="reset" class="btn btn-outline-dark">Reset</button>
           </div>
         </form>
