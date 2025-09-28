@@ -210,10 +210,7 @@ if (navbar) {
                         <a class="nav-link " href="./about.html">About Us</a>
                     </li>
                 </ul>
-                <form class=" me-3 d-lg-block d-none">
-                    <button class="btn btn-purple btn-lg ">Login</button>
-                    <button class="btn btn-purple btn-lg ">Signup</button>
-                </form>
+                
             </div>
 `
 }
@@ -1776,117 +1773,78 @@ if (staedtlerColor) {
 
 
 
-
-
-
-
-
-
-
-
-let params = new URLSearchParams(window.location.search);
-
-let brand = params.get("featured");     // dollarProducts
-let category = params.get("category");  // pens
-let id = parseInt(params.get("id"));    // 0
-
-// Step 1: brand object uthao
-let brandObj = window[brand];
-if(category){
-
-  let product = brandObj[category][id]
-
-  if (product) {
-      document.getElementById("productDetail").innerHTML = `
-        
-
     
+let productOne = document.getElementById('productOne')
+let productTwo = document.getElementById('productTwo')
+if (productOne) {
+  let html = '<option selected disabled>Open this select menu</option>'
 
-    <div class="row g-4">
-    
-    <!-- Product Image -->
-    <div class="col-md-5 text-center">
-      <img src="${product.image}" alt="${product.title}"
-           class="img-fluid rounded shadow-lg">
-    </div>
-
-    <!-- Product Info -->
-    <div class="col-md-7">
-      <h2 class="fw-bold mb-3">${product.title}</h2>
-
-      <!-- Brand & Category -->
-      <p class="text-secondary mb-1">
-        <strong>Brand:</strong> ${product.brand}
-      </p>
-      <p class="text-secondary mb-3">
-        <strong>Category:</strong> ${product.category}
-      </p>
-
-      <!-- Description -->
-      <p class="mb-4">${product.text}</p>
-
-      <!-- Price -->
-      <h3 class="text-success mb-4">Price: ${product.price}</h3>
-
-      <!-- Buttons -->
-      <div class="d-flex gap-3 mb-4">
-        <a href="#" class="btn btn-primary px-4">${product.addToCart}</a>
-      </div>
-    </div>
-  </div>
-      `;
-       let title =  document.getElementById('title').innerText = product.title
-      console.log(title);
-      
-    }
-}else{
-let product = brandObj[id]
-
-if (product) {
-      document.getElementById("productDetail").innerHTML = `
-        
-
-    
-
-    <div class="row g-4">
-    
-    <!-- Product Image -->
-    <div class="col-md-5 text-center">
-      <img src="${product.image}" alt="${product.title}"
-           class="img-fluid rounded shadow-lg">
-    </div>
-
-    <!-- Product Info -->
-    <div class="col-md-7">
-      <h2 class="fw-bold mb-3">${product.title}</h2>
-
-      <!-- Brand & Category -->
-      <p class="text-secondary mb-1">
-        <strong>Brand:</strong> ${product.brand}
-      </p>
-      <p class="text-secondary mb-3">
-        <strong>Category:</strong> ${product.category}
-      </p>
-
-      <!-- Description -->
-      <p class="mb-4">${product.text}</p>
-
-      <!-- Price -->
-      <h3 class="text-success mb-4">Price: ${product.price}</h3>
-
-      <!-- Buttons -->
-      <div class="d-flex gap-3 mb-4">
-        <a href="#" class="btn btn-primary px-4">${product.addToCart}</a>
-      </div>
-    </div>
-  </div>
-      `;
-       let title =  document.getElementById('title').innerText = product.title
-      console.log(title);
-      
-    }
+for (let i = 0; i < dollarProducts.pens.length; i++) {
+  html += `
+  <option>${dollarProducts.pens[i].title}</option>
+  `
+  // console.log(featuredProducts[i].title)
+  
+}
+for (let i = 0; i < dollarProducts.pencils.length; i++) {
+  html += `
+  <option>${dollarProducts.pencils[i].title}</option>
+  `
+  // console.log(featuredProducts[i].title)
+  
+}
+for (let i = 0; i < dollarProducts.colors.length; i++) {
+  html += `
+  <option>${dollarProducts.colors[i].title}</option>
+  `
+  // console.log(featuredProducts[i].title)
+  
 }
 
-    
+productOne.innerHTML = html
 
+}
+if (productTwo) {
+  let html = '<option selected disabled>Open this select menu</option>'
+for (let i = 0; i < staedtlerProducts.pencils.length; i++) {
+  html += `
+  <option>${staedtlerProducts.pencils[i].title}</option>
+  `
+  // console.log(featuredProducts[i].title)
+  
+}
+for (let i = 0; i < staedtlerProducts.pens.length; i++) {
+  html += `
+  <option>${staedtlerProducts.pens[i].title}</option>
+  `
+  // console.log(featuredProducts[i].title)
+  
+}
+for (let i = 0; i < staedtlerProducts.colors.length; i++) {
+  html += `
+  <option>${staedtlerProducts.colors[i].title}</option>
+  `
+  // console.log(featuredProducts[i].title)
+  
+}
+
+productTwo.innerHTML = html
+
+}
+
+   
+let proOneDiv = document.getElementById('pro-1-compare')
+let proTwoDiv = document.getElementById('pro-2-compare')
+
+function productAppear() {
+  let selectedItemOne = productOne.value
+  let selectedItemTwo = productTwo.value
+  if (selectedItemOne === 'Open this select menu' || selectedItemTwo === 'Open this select menu') {
+    let error = document.getElementById('showError').innerHTML = `
     
+     <button class=" btn btn-outline-primary mb-4" onclick="(productAppear())"> compare</button>
+    <h5>Select Valid Product</h5>`
+  }
+  
+  
+}

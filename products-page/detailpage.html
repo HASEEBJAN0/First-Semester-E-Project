@@ -48,49 +48,110 @@
             cross.classList.toggle('d-none')
         })
 
-         // URL se Id aur category fetch karo
-    // let params = new URLSearchParams(window.location.search);
-    // let id = +params.get("id");
-    // let productJSON = params.get("featured")
+         let params = new URLSearchParams(window.location.search);
 
-    
-    // // console.log(typeof window[productJSON]);
-    
-    // let product = window[productJSON];
-    // console.log(product);
-    
+let brand = params.get("featured");     // dollarProducts
+let category = params.get("category");  // pens
+let id = parseInt(params.get("id"));    // 0
 
-    // // Show product details
-    // if (product) {
-    // //   document.getElementById("productDetail").innerHTML = `
+// Step 1: brand object uthao
+let brandObj = window[brand];
+if(category){
+
+  let product = brandObj[category][id]
+console.log(product)
+  if (product) {
+      document.getElementById("productDetail").innerHTML = `
         
 
-    // //     <div class="row g-4">
-      
-    // //   <!-- Product Image -->
-    // //   <div class="col-md-4 text-center">
-    // //     <img src=${product.image} alt="Product Image" class=" img-fluid rounded shadow">
-    // //   </div>
+    
 
-    // //   <!-- Product Info -->
-    // //   <div class="col-md-8">
-    // //     <h2 >${product.title}</h2>
-    // //     <p " class="mt-3">${product.text}</p>
-    // //     <h4 class="text-success mt-3">${product.price}</h4>
+    <div class="row g-4">
+    
+    <!-- Product Image -->
+    <div class="col-md-5 text-center">
+      <img src="${product.image}" alt="${product.title}"
+           class="img-fluid rounded shadow-lg">
+    </div>
+
+    <!-- Product Info -->
+    <div class="col-md-7">
+      <h2 class="fw-bold mb-3">${product.title}</h2>
+
+      <!-- Brand & Category -->
+      <p class="text-secondary mb-1">
+        <strong>Brand:</strong> ${product.brand}
+      </p>
+      <p class="text-secondary mb-3">
+        <strong>Category:</strong> ${product.category}
+      </p>
+
+      <!-- Description -->
+      <p class="mb-4">${product.text}</p>
+
+      <!-- Price -->
+      <h3 class="text-success mb-4">Price: ${product.price}</h3>
+
+      <!-- Buttons -->
+      <div class="d-flex gap-3 mb-4">
+        <a href="#" class="btn btn-primary px-4">${product.addToCart}</a>
+        </div>
+        </div>
+        </div>
+        `;
+        let title =  document.getElementById('title').innerText = product.title
+        console.log(title);
         
-    // //     <!-- Buttons -->
-    // //     <div class="">
-    // //       <a href="#" class="btn btn-primary">${product.addToCart}</a>
-    // //     </div>
-    // //   </div>
-    // // </div>
-    // //   `;
-    //    let title =  document.getElementById('title').innerText = product.title
-    //   console.log(title);
+      }
+    }else{
       
-    // } else {
-    //   document.getElementById("productDetail").innerHTML = `<p class="text-danger">Product not found!</p>`;
+      
+  let product = brandObj[id]
+  // if (product) {
+      document.getElementById("productDetail").innerHTML = `
+        
+
+    
+
+    <div class="row g-4">
+    
+    <!-- Product Image -->
+    <div class="col-md-5 text-center">
+      <img src="${product.image}" alt="${product.title}"
+           class="img-fluid rounded shadow-lg">
+    </div>
+
+    <!-- Product Info -->
+    <div class="col-md-7">
+      <h2 class="fw-bold mb-3">${product.title}</h2>
+
+      <!-- Brand & Category -->
+      <p class="text-secondary mb-1">
+        <strong>Brand:</strong> ${product.brand}
+      </p>
+      <p class="text-secondary mb-3">
+        <strong>Category:</strong> ${product.category}
+      </p>
+
+      <!-- Description -->
+      <p class="mb-4">${product.text}</p>
+
+      <!-- Price -->
+      <h3 class="text-success mb-4">Price: ${product.price}</h3>
+
+      <!-- Buttons -->
+      <div class="d-flex gap-3 mb-4">
+        <a href="#" class="btn btn-primary px-4">${product.addToCart}</a>
+      </div>
+    </div>
+  </div>
+      `;
+       let title =  document.getElementById('title').innerText = product.title
+      console.log(title);
+      
     // }
+}
+
     </script>
 </body>
 
