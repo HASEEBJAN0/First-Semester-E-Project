@@ -26,13 +26,12 @@
     </nav>
 
     <div class="container-fluid color-bg py-5  margin" id="productDetail">
-        <!-- <h2 class="text-center fs-1 mt-5">Compare Products</h2> -->
     </div>
 
 
 
 
-    <div class="container-fluid color-bg py-5" id="d-footer">
+    <div class="container-fluid color-bg footer" id="d-footer">
         
     </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/9.2.0/mdb.umd.min.js"></script>
@@ -42,7 +41,6 @@
         let btn = document.getElementsByClassName('navbar-toggler')[0];
         let ham = document.getElementsByClassName('bi-list')[0];
         let cross = document.getElementsByClassName('bi-x-lg')[0];
-        // console.log(btn)
         btn.addEventListener('click', () => {
             ham.classList.toggle('d-none')
             cross.classList.toggle('d-none')
@@ -50,11 +48,9 @@
 
          let params = new URLSearchParams(window.location.search);
 
-let brand = params.get("featured");     // dollarProducts
-let category = params.get("category");  // pens
-let id = parseInt(params.get("id"));    // 0
-
-// Step 1: brand object uthao
+let brand = params.get("featured");  
+let category = params.get("category");  
+let id = parseInt(params.get("id"));   
 let brandObj = window[brand];
 if(category){
 
@@ -71,7 +67,7 @@ console.log(product)
     <!-- Product Image -->
     <div class="col-md-5 text-center">
       <img src="${product.image}" alt="${product.title}"
-           class="img-fluid rounded shadow-lg">
+           class="img-fluid rounded shadow-lg ">
     </div>
 
     <!-- Product Info -->
@@ -94,7 +90,9 @@ console.log(product)
 
       <!-- Buttons -->
       <div class="d-flex gap-3 mb-4">
-        <a href="#" class="btn btn-primary px-4">${product.addToCart}</a>
+        <a href="Universal_Stationery_Catalog.docx" download class="btn btn-primary">
+          📥 Download Catalog
+        </a>
         </div>
         </div>
         </div>
@@ -107,7 +105,6 @@ console.log(product)
       
       
   let product = brandObj[id]
-  // if (product) {
       document.getElementById("productDetail").innerHTML = `
         
 
@@ -117,7 +114,7 @@ console.log(product)
     
     <!-- Product Image -->
     <div class="col-md-5 text-center">
-      <img src="${product.image}" alt="${product.title}"
+      <img src="../${product.image}" alt="${product.title}"
            class="img-fluid rounded shadow-lg">
     </div>
 
@@ -141,7 +138,9 @@ console.log(product)
 
       <!-- Buttons -->
       <div class="d-flex gap-3 mb-4">
-        <a href="#" class="btn btn-primary px-4">${product.addToCart}</a>
+        <a href="Universal_Stationery_Catalog.docx" download class="btn btn-primary">
+          📥 Download Catalog
+        </a>
       </div>
     </div>
   </div>
@@ -149,7 +148,7 @@ console.log(product)
        let title =  document.getElementById('title').innerText = product.title
       console.log(title);
       
-    // }
+  
 }
 
     </script>

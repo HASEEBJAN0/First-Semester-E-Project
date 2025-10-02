@@ -36,17 +36,18 @@
   </section>
 
   <section class="container-fluid bg-color py-5">
-    <div class="container">
-      <div class="p-4 rounded shadow-sm color-bg">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="p-4 rounded shadow-sm color-bg">
         <h4>Get in touch</h4>
         <p class="mb-1"><strong>Address</strong></p>
         <p class="small text-muted">Aptec Metro Star Gate, Near City Center, Lahore, Pakistan</p>
 
         <p class="mb-1 mt-3"><strong>Phone</strong></p>
-        <p class="small text-muted">+92 300 1234567</p>
+        <p class="small text-muted"><a href="tel:+92 300 1234567">+92 300 1234567</a></p>
 
         <p class="mb-1 mt-3"><strong>Email</strong></p>
-        <p class="small text-muted">universalstationers@gmail.com</p>
+        <p class="small text-muted"><a href="mailto:universalstationers@gmail.com">universalstationers@gmail.com</a></p>
 
         <hr>
 
@@ -67,25 +68,21 @@
           <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </p>
       </div>
-    </div>
-  </section>
-
-  <!-- Contact Form -->
-  <section class="container-fluid py-5 color-bg">
-    <div class="container">
-      <div class="p-4 rounded shadow-sm bg-color">
+      </div>
+      <div class="col-md-6">
+        <div class="p-4 rounded shadow-sm bg-color">
         <h4>Send us a message</h4>
         <p class="small text-muted">Fill the form and our support team will reply within 24 hours.</p>
 
         <form>
           <div class="mb-3">
             <label for="name" >Your Name</label>
-            <input type="text" name="name" pattern="[A,Za,z]{4,}" class="form-control" required placeholder="Name">
+            <input type="text" name="name" pattern="[A-Za-z]{3,15}" title="Enter your Name without Number minimum 4 and maximum 15 chahracter" class="form-control" placeholder="Name" required>
           </div>
 
           <div class="mb-3">
             <label for="email" >Email</label>
-            <input id="email" name="email" type="email" class="form-control" required placeholder="Email Address">
+            <input id="email" name="email" type="email" class="form-control" required placeholder="Email Address" required>
           </div>
 
           <div class="mb-3">
@@ -99,16 +96,17 @@
           </div>
 
           <div>
-            <a type="submit" class="btn btn-primary me-3" href="mailto: universalstationer@gmail.com">Send Message</a>
+            <input type="submit" class="btn btn-primary me-3" value="Send Message">
             <button type="reset" class="btn btn-outline-dark">Reset</button>
           </div>
         </form>
       </div>
+      </div>
     </div>
   </section>
 
-  <!-- Map -->
-  <section class="container-fluid bg-color py-5">
+  
+  <section class="container-fluid color-bg py-5">
     <div class="container">
       <div class="p-4 rounded shadow-sm color-bg">
         <h5>Find our store</h5>
@@ -121,14 +119,7 @@
     </div>
   </section>
 
-    <!-- <div class="container-fluid color-bg py-5  margin">
-        <h2 class="text-center fs-1 mt-5">Contact Us</h2>
-    </div> -->
-
-
-
-
-    <div class="container-fluid color-bg py-5" id="d-footer">
+    <div class="container-fluid footer" id="d-footer">
         
     </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/9.2.0/mdb.umd.min.js"></script>
@@ -138,7 +129,6 @@
         let btn = document.getElementsByClassName('navbar-toggler')[0];
         let ham = document.getElementsByClassName('bi-list')[0];
         let cross = document.getElementsByClassName('bi-x-lg')[0];
-        // console.log(btn)
         btn.addEventListener('click', () => {
             ham.classList.toggle('d-none')
             cross.classList.toggle('d-none')

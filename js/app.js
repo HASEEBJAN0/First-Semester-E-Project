@@ -128,16 +128,16 @@ if (featuredContainer) {
   let html = "";
   for (let i = 0; i < featuredProducts.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6 auto-show">
+      <div class="col-md-3 col-sm-6 auto-show d-flex justify-content-center">
         <div class="card">
           <img src="${featuredProducts[i].image}" class="card-img-top img-fluid" alt="">
-          <div class="card-body">
-            <h5>${featuredProducts[i].title}</h5>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class='text-truncate'>${featuredProducts[i].title}</h5>
             
-            <p>${featuredProducts[i].price}</p>
+            <p >${featuredProducts[i].price}</p>
             <div>
             <a href="./products-page/detailpage.html?featured=featuredProducts&id=${i}" class="btn btn-info">${featuredProducts[i].button}</a>
-            <a href="#" class="btn btn-primary">Add To Cart</a>
+            
             </div>
           </div>
         </div>
@@ -145,8 +145,6 @@ if (featuredContainer) {
   }
   featuredContainer.innerHTML = html;
 }
-
-
 
                   //   Navbar
 
@@ -226,14 +224,11 @@ if(footer) {
 
 
 footer.innerHTML = `
-<footer class="text-center text-lg-start auto-show">
-            <div class="container p- pb-0">
-                <!-- Section: Links -->
+        <footer class="text-center text-lg-start ">
+            <div class=" p- pb-0">
                 <section class="">
-                    <!--Grid row-->
                     <div class="row">
-                        <!-- Grid column -->
-                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <div class="col-md-3 col-lg-3 col-xl-3 col-12 mx-auto mt-3 auto-show">
                             <h6 class="text-uppercase mb-4 font-weight-bold">
                                 Universal Stationer's
                             </h6>
@@ -243,38 +238,34 @@ footer.innerHTML = `
                                 elit.
                             </p>
                         </div>
-                        <!-- Grid column -->
-
                         <hr class="w-100 clearfix d-md-none" />
-
-                        <!-- Grid column -->
-                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <div class="col-md-2 col-lg-2 col-xl-2  col-4 mx-auto mt-3 auto-show">
                             <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
                             <p>
-                                <a class="text-dark" href="./staples.html">Staples</a>
+                                <a class="text-dark" href="staples.html">Staples</a>
                             </p>
                             <p>
-                                <a class="text-dark" href="./faber-castell.html">Faber Castell</a>
+                                <a class="text-dark" href="faber-castell.html">Faber Castell</a>
                             </p>
                             <p>
-                                <a class="text-dark" href="./dollar.html">Dollar</a>
+                                <a class="text-dark" href="dollar.html">Dollar</a>
                             </p>
                             <p>
-                                <a class="text-dark" href="./pelikan.html">Pelikaan</a>
-                            </p>
-                            <p> 
-                                <a class="text-dark" href="./pilot.html">Pilot</a>
+                                <a class="text-dark" href="pelikan.html">Pelikaan</a>
                             </p>
                             <p>
-                                <a class="text-dark" href="./staedtler.html">Staedtler</a>
+                                <a class="text-dark" href="pilot.html">Pilot</a>
+                            </p>
+                            <p>
+                                <a class="text-dark" href="staedtler.html">Staedtler</a>
                             </p>
                         </div>
                         <!-- Grid column -->
 
-                        <hr class="w-100 clearfix d-md-none" />
+                        <!-- <hr class="w-100 clearfix d-md-none" /> -->
 
                         <!-- Grid column -->
-                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <div class="col-md-3 col-lg-2 col-xl-2 col-4 mx-auto mt-3 auto-show">
                             <h6 class="text-uppercase mb-4 font-weight-bold">
                                 Useful links
                             </h6>
@@ -282,13 +273,13 @@ footer.innerHTML = `
                                 <a class="text-dark" href="../index.html">Home</a>
                             </p>
                             <p>
-                                <a class="text-dark" href="./about.html">About Us</a>
+                                <a class="text-dark" href="about.html">About Us</a>
                             </p>
                             <p>
-                                <a class="text-dark" href="./contact.html">Contact Us</a>
+                                <a class="text-dark" href="contact.html">Contact Us</a>
                             </p>
                             <p>
-                                <a class="text-dark" href="./compare.html">Compare</a>
+                                <a class="text-dark" href="compare.html">Compare</a>
                             </p>
                         </div>
 
@@ -296,12 +287,15 @@ footer.innerHTML = `
                         <hr class="w-100 clearfix d-md-none" />
 
                         <!-- Grid column -->
-                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <div class="col-md-4 col-lg-3 col-xl-3  mx-auto mt-3 auto-show">
                             <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
                             <p><i class="fas fa-home mr-3"></i> Atech Metro Star Gate</p>
-                            <p><i class="fas fa-envelope mr-3"></i> universalstationer@gmail.com</p>
-                            <p><i class="fas fa-phone mr-3"></i> + 92 323 667 882 32</p>
-                            <p><i class="fas fa-print mr-3"></i> + 92 323 667 342 32</p>
+                            <p><i class="fas fa-envelope mr-3"></i><a href="mailto: universalstationer@gmail.com">
+                                    universalstationer@gmail.com</a></p>
+                            <p><i class="fas fa-phone mr-3"></i><a href="tel: + 92 323 667 882 32"> + 92 323 667 882
+                                    32</a></p>
+                            <p><i class="fas fa-print mr-3"></i><a href="tel: + 92 323 667 342 32"> + 92 323 667 342
+                                    32</a></p>
                         </div>
                         <!-- Grid column -->
                     </div>
@@ -319,7 +313,7 @@ footer.innerHTML = `
                             <!-- Copyright -->
                             <div class="p-3">
                                 © 2020 Copyright:
-                                <a class="text-dark " href="../index.html">Universal Stationer's</a>
+                                <a class="text-dark " href="./index.html">Universal Stationer's</a>
                             </div>
                             <!-- Copyright -->
                         </div>
@@ -328,27 +322,24 @@ footer.innerHTML = `
                         <!-- Grid column -->
                         <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
                             <!-- Facebook -->
-                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                            <a class="btn btn-outline-dark btn-floating m-1" class="text-dark" role="button"><i
                                     class="fab fa-facebook-f"></i></a>
 
                             <!-- Twitter -->
-                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                            <a class="btn btn-outline-dark btn-floating m-1" class="text-dark" role="button"><i
                                     class="fab fa-twitter"></i></a>
 
                             <!-- Google -->
-                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                            <a class="btn btn-outline-dark btn-floating m-1" class="text-dark" role="button"><i
                                     class="fab fa-google"></i></a>
 
                             <!-- Instagram -->
-                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                            <a class="btn btn-outline-dark btn-floating m-1" class="text-dark" role="button"><i
                                     class="fab fa-instagram"></i></a>
                         </div>
-                        <!-- Grid column -->
                     </div>
                 </section>
-                <!-- Section: Copyright -->
             </div>
-            <!-- Grid container -->
         </footer>
         `
 }
@@ -356,8 +347,6 @@ footer.innerHTML = `
      // Dollar Cards
 
 
-
-// 
 
 var dollarProducts = {
   pens: [
@@ -618,15 +607,14 @@ if (dollarPen) {
   let html = '';
   for (var i = 0; i < dollarProducts.pens.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6 auto-show">
+      <div class="col-md-3 col-sm-6 auto-show d-flex justify-content-center ">
         <div class="card">
           <img src=${dollarProducts.pens[i].image} class="card-img-top img-fluid" alt="">
-          <div class="card-body">
-            <h5>${dollarProducts.pens[i].title}</h5>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class='text-truncate'>${dollarProducts.pens[i].title}</h5>
             <p>${dollarProducts.pens[i].price}</p>
             <div>
             <a href="../products-page/detailpage.html?featured=dollarProducts&id=${i}&category=pens" class="btn btn-info">${dollarProducts.pens[i].button}</a>
-            <a href="#" class="btn btn-primary ">${dollarProducts.pens[i].addToCart}</a>
             </div>
           </div>
         </div>
@@ -639,15 +627,14 @@ if (dollarPencil) {
   let html = '';
   for (var i = 0; i < dollarProducts.pencils.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6 auto-show">
+      <div class="col-md-3 col-sm-6 auto-show d-flex justify-content-center">
         <div class="card">
           <img src=${dollarProducts.pencils[i].image} class="card-img-top img-fluid" alt="">
-          <div class="card-body">
-            <h5>${dollarProducts.pencils[i].title}</h5>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class='text-truncate'>${dollarProducts.pencils[i].title}</h5>
             <p>${dollarProducts.pencils[i].price}</p>
             <div>
             <a href="../products-page/detailpage.html?featured=dollarProducts&id=${i}&category=pencils" class="btn btn-info">${dollarProducts.pencils[i].button}</a>
-            <a href="#" class="btn btn-primary ">${dollarProducts.pencils[i].addToCart}</a>
             </div>
           </div>
         </div>
@@ -660,15 +647,14 @@ if (dollarColour) {
   let html = '';
   for (var i = 0; i < dollarProducts.pencils.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6 auto-show">
+      <div class="col-md-3 col-sm-6 auto-show d-flex  justify-content-center">
         <div class="card ">
           <img src=${dollarProducts.colors[i].image} class="card-img-top" alt="">
-          <div class="card-body h-75">
-            <h5>${dollarProducts.colors[i].title}</h5>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class='text-truncate'>${dollarProducts.colors[i].title}</h5>
             <p>${dollarProducts.colors[i].price}</p>
             <div>
             <a href="../products-page/detailpage.html?featured=dollarProducts&id=${i}&category=colors" class="btn btn-info">${dollarProducts.colors[i].button}</a>
-            <a href="#" class="btn btn-primary ">${dollarProducts.colors[i].addToCart}</a>
             </div>
           </div>
         </div>
@@ -899,15 +885,14 @@ if (stapleNoteBook) {
   let html = '';
   for (var i = 0; i < staplesProducts.notebooks.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6 auto-show">
+      <div class="col-md-3 col-sm-6 auto-show d-flex justify-content-center">
         <div class="card">
           <img src=${staplesProducts.notebooks[i].image} class="card-img-top img-fluid" alt="">
-          <div class="card-body">
-            <h5>${staplesProducts.notebooks[i].title}</h5>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class='text-truncate'>${staplesProducts.notebooks[i].title}</h5>
             <p>${staplesProducts.notebooks[i].price}</p>
             <div>
             <a href="../products-page/detailpage.html?featured=staplesProducts&id=${i}&category=notebooks" class="btn btn-info">${staplesProducts.notebooks[i].button}</a>
-            <a href="#" class="btn btn-primary">${staplesProducts.notebooks[i].addToCart}</a>
             </div>
           </div>
         </div>
@@ -921,15 +906,14 @@ if (stapleFile) {
   let html = '';
   for (var i = 0; i < staplesProducts.files.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6 auto-show ">
+      <div class="col-md-3 col-sm-6 auto-show d-flex justify-content-center">
         <div class="card">
           <img src=${staplesProducts.files[i].image} class="card-img-top img-fluid" alt="">
-          <div class="card-body">
-            <h5>${staplesProducts.files[i].title}</h5>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class='text-truncate'>${staplesProducts.files[i].title}</h5>
             <p>${staplesProducts.files[i].price}</p>
             <div>
             <a href="../products-page/detailpage.html?featured=staplesProducts&id=${i}&category=files" class="btn btn-info">${staplesProducts.files[i].button}</a>
-            <a href="#" class="btn btn-primary">${staplesProducts.files[i].addToCart}</a>
             </div>
           </div>
         </div>
@@ -942,15 +926,14 @@ if (stapleStapler) {
   let html = '';
   for (var i = 0; i < staplesProducts.staplers.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6 auto-show">
+      <div class="col-md-3 col-sm-6 auto-show d-flex justify-content-center">
         <div class="card">
           <img src=${staplesProducts.staplers[i].image} class="card-img-top img-fluid" alt="">
-          <div class="card-body">
-            <h5>${staplesProducts.staplers[i].title}</h5>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class='text-truncate'>${staplesProducts.staplers[i].title}</h5>
             <p>${staplesProducts.staplers[i].price}</p>
             <div>
             <a href="../products-page/detailpage.html?featured=staplesProducts&id=${i}&category=staplers" class="btn btn-info">${staplesProducts.staplers[i].button}</a>
-            <a href="#" class="btn btn-primary ">${staplesProducts.staplers[i].addToCart}</a>
             </div>
           </div>
         </div>
@@ -1101,15 +1084,14 @@ if (faberPen) {
   let html = '';
  for(var i = 0 ;i < faberCastellProducts.pens.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6 auto-show ">
+      <div class="col-md-3 col-sm-6 auto-show d-flex justify-content-center">
         <div class="card">
           <img src=${faberCastellProducts.pens[i].image} class="card-img-top img-fluid" alt="">
-          <div class="card-body">
-            <h5>${faberCastellProducts.pens[i].title}</h5>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class='text-truncate'>${faberCastellProducts.pens[i].title}</h5>
             <p>${faberCastellProducts.pens[i].price}</p>
             <div>
             <a href="../products-page/detailpage.html?featured=faberCastellProducts&id=${i}&category=pens" class="btn btn-info">${faberCastellProducts.pens[i].button}</a>
-            <a href="#" class="btn btn-primary">${faberCastellProducts.pens[i].addToCart}</a>
             </div>
           </div>
         </div>
@@ -1122,15 +1104,14 @@ if (faberPencil) {
   let html = '';
   for (var i = 0; i < faberCastellProducts.pencils.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6 auto-show">
-        <div class="card">
+      <div class="col-md-3 col-sm-6 auto-show d-flex justify-content-center">
+        <div class="card ">
           <img src=${faberCastellProducts.pencils[i].image} class="card-img-top img-fluid" alt="">
-          <div class="card-body">
+          <div class="card-body d-flex flex-column justify-content-between">
             <h5>${faberCastellProducts.pencils[i].title}</h5>
             <p>${faberCastellProducts.pencils[i].price}</p>
             <div>
             <a href="../products-page/detailpage.html?featured=faberCastellProducts&id=${i}&category=pencils" class="btn btn-info">${faberCastellProducts.pencils[i].button}</a>
-            <a href="#" class="btn btn-primary ">${faberCastellProducts.pencils[i].addToCart}</a>
             </div>
           </div>
         </div>
@@ -1143,15 +1124,14 @@ if (fabercolor) {
   let html = '';
   for (var i = 0; i < faberCastellProducts.colors.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6 auto-show">
+      <div class="col-md-3 col-sm-6 auto-show d-flex justify-content-center">
         <div class="card">
           <img src=${faberCastellProducts.colors[i].image} class="card-img-top img-fluid" alt="">
-          <div class="card-body">
-            <h5>${faberCastellProducts.colors[i].title}</h5>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class='text-truncate'>${faberCastellProducts.colors[i].title}</h5>
             <p>${faberCastellProducts.colors[i].price}</p>
             <div>
             <a href="../products-page/detailpage.html?featured=faberCastellProducts&id=${i}&category=colors" class="btn btn-info">${faberCastellProducts.colors[i].button}</a>
-            <a href="#" class="btn btn-primary ">${faberCastellProducts.colors[i].addToCart}</a>
             </div>
           </div>
         </div>
@@ -1172,7 +1152,7 @@ var pelikanProducts = {
       title: "Pelikan HB Pencil",
       text: "The Pelikan HB Pencil is a high-quality wooden pencil designed for students and professionals. Its smooth graphite core allows for effortless writing and precise sketching. Durable and lightweight, it ensures comfortable handling during long school, office, or creative sessions. Easy to sharpen without breaking, it delivers consistent performance. Eco-friendly materials are used in its production, making it a responsible choice. Ideal for exams, note-taking, and artistic tasks, this pencil combines functionality, reliability, and quality in an affordable stationery tool.",
       price: "Rs. 40",
-      image: "../assets/pl-img1.png",
+      image: "https://images.pexels.com/photos/159752/pencil-office-design-creative-159752.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1182,7 +1162,7 @@ var pelikanProducts = {
       title: "Pelikan Exam Pencil",
       text: "The Pelikan Exam Pencil is specially designed for long writing sessions during exams. Its strong graphite core ensures clear and consistent lines while maintaining smoothness on all paper types. The ergonomic design reduces hand fatigue, making it perfect for students. Lightweight yet durable, it can be easily carried in pencil cases. This pencil is reliable, cost-effective, and crafted with care to provide an optimal writing experience for academic, office, and creative needs.",
       price: "Rs. 50",
-      image: "../assets/pl-img2.png",
+      image: "https://images.pexels.com/photos/8250938/pexels-photo-8250938.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1192,7 +1172,7 @@ var pelikanProducts = {
       title: "Pelikan Drawing Pencil",
       text: "The Pelikan Drawing Pencil is ideal for artists, designers, and students who require precision in sketching and shading. Its premium graphite allows for smooth, consistent lines and rich, dark strokes. Lightweight and easy to handle, it provides maximum comfort during long creative sessions. Durable and reliable, this pencil is perfect for technical drawings, artistic illustrations, and classroom assignments. Pelikan's commitment to quality ensures that each pencil delivers consistent performance and longevity for everyday use.",
       price: "Rs. 70",
-      image: "../assets/pl-img3.png",
+      image: "https://images.pexels.com/photos/8250889/pexels-photo-8250889.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1202,7 +1182,7 @@ var pelikanProducts = {
       title: "Pelikan Grip Pencil",
       text: "The Pelikan Grip Pencil features an ergonomic design to enhance comfort during extended use. Its smooth graphite core ensures neat writing, drawing, and note-taking. Durable and lightweight, it resists breakage and provides consistent performance. Perfect for students, professionals, and artists, this pencil is a reliable companion for school, office, or creative projects. Designed for precision, comfort, and long-lasting use, it is an essential tool for anyone seeking high-quality stationery.",
       price: "Rs. 80",
-      image: "../assets/pl-img4.png",
+      image: "https://images.pexels.com/photos/31867864/pexels-photo-31867864.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     }
@@ -1215,7 +1195,7 @@ var pelikanProducts = {
       title: "Pelikan Ball Pen",
       text: "The Pelikan Ball Pen offers smooth, consistent ink flow for effortless writing in classrooms, offices, and personal projects. Its ergonomic design ensures comfort even during extended writing sessions. Durable and lightweight, it delivers precise, clean, and professional handwriting. Ideal for students, professionals, and artists, it combines functionality, reliability, and style in a premium stationery tool suitable for daily use.",
       price: "Rs. 150",
-      image: "../assets/pl-img5.png",
+      image: "https://images.pexels.com/photos/372748/pexels-photo-372748.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1225,7 +1205,7 @@ var pelikanProducts = {
       title: "Pelikan Gel Pen",
       text: "The Pelikan Gel Pen provides bold, smooth, and smudge-free writing. Its premium gel ink ensures vibrant lines and effortless glide across paper. Ergonomically designed, it is comfortable for long writing sessions, making it ideal for students, professionals, and artists. Durable and stylish, this pen is perfect for school, office, and creative tasks, combining high-quality performance with elegance and reliability.",
       price: "Rs. 200",
-      image: "../assets/pl-img6.png",
+      image: "https://images.pexels.com/photos/356340/pexels-photo-356340.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1235,7 +1215,7 @@ var pelikanProducts = {
       title: "Pelikan Fountain Pen",
       text: "The Pelikan Fountain Pen is an elegant, refillable pen crafted for smooth and precise writing. Its fine nib allows effortless ink flow, ideal for professional documents, personal notes, and creative work. Lightweight yet durable, it provides comfort during long sessions. Trusted by students and professionals alike, this pen combines style, reliability, and exceptional performance for a premium writing experience.",
       price: "Rs. 2,500",
-      image: "../assets/pl-img7.png",
+      image: "https://images.pexels.com/photos/753695/pexels-photo-753695.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1245,7 +1225,7 @@ var pelikanProducts = {
       title: "Pelikan Ink Pen",
       text: "The Pelikan Ink Pen features a refillable design for long-lasting use. Smooth ink flow ensures clean, precise lines, suitable for writing, drawing, and office tasks. Comfortable and ergonomic, it reduces hand fatigue during extended use. Durable and reliable, this pen is ideal for students, professionals, and artists seeking a high-quality, elegant writing tool that combines practicality and style.",
       price: "Rs. 600",
-      image: "../assets/pl-img8.png",
+      image: "https://images.pexels.com/photos/27618085/pexels-photo-27618085.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     }
@@ -1258,7 +1238,7 @@ var pelikanProducts = {
       title: "Pelikan Crayons",
       text: "The Pelikan Crayons set features bright, non-toxic colors suitable for children and school projects. Smooth application ensures vibrant, long-lasting shades, perfect for creative artwork and classroom tasks. Lightweight and durable, these crayons provide a reliable and enjoyable coloring experience. Ideal for students, artists, and hobbyists, they combine safety, quality, and convenience in a practical stationery tool for creative expression.",
       price: "Rs. 300",
-      image: "../assets/pl-img9.png",
+      image: "https://media.istockphoto.com/id/1265678071/photo/wooden-colored-pencils-isolated-on-white-background.jpg?b=1&s=612x612&w=0&k=20&c=k_zjqkh97Wezk3PqFrt_cxRrUKu4UvnkMxaJhc5PQ-8=",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1268,7 +1248,7 @@ var pelikanProducts = {
       title: "Pelikan Oil Pastels",
       text: "Pelikan Oil Pastels offer smooth, rich color ideal for creative projects, shading, and artistic expression. High-quality pigments ensure vibrant and consistent results. Ergonomic and durable, these pastels provide comfort for extended use. Perfect for students, artists, and hobbyists, they deliver excellent coverage and blendability. Reliable, safe, and versatile, Pelikan Oil Pastels are a valuable addition to any art supplies collection.",
       price: "Rs. 400",
-      image: "../assets/pl-img10.png",
+      image: "https://media.istockphoto.com/id/585170598/photo/bunch-of-fun-mini-colored-pencils-isolated-on-white.jpg?b=1&s=612x612&w=0&k=20&c=iQQMe6Lmv3Sw1ksHG0JQCPUCpWmahGjuLlaxD_qnFXA=",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1278,7 +1258,7 @@ var pelikanProducts = {
       title: "Pelikan Poster Colors",
       text: "Pelikan Poster Colors are bold, water-based paints perfect for school, art projects, and creative activities. Smooth application and vibrant pigmentation make them ideal for painting, coloring, and layering techniques. Safe and non-toxic, they are suitable for children and adults. Durable and easy to use, these poster colors provide consistent results for all projects. Pelikan ensures high-quality performance and enjoyable creative experiences with these paints.",
       price: "Rs. 450",
-      image: "../assets/pl-img11.png",
+      image: "https://media.istockphoto.com/id/172304269/photo/colored-pencils.jpg?b=1&s=612x612&w=0&k=20&c=e1KqKf9CNgpWXD727T8NCMjom772_ul5aAXyFJXULxk=",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1288,7 +1268,7 @@ var pelikanProducts = {
       title: "Pelikan Markers",
       text: "Pelikan Markers feature dual-tip design and smooth ink flow, ideal for coloring, sketching, and school projects. High-quality, non-toxic ink ensures vibrant, long-lasting results. Comfortable and durable, these markers are perfect for extended creative sessions. Students, artists, and hobbyists can rely on Pelikan Markers for precise and enjoyable coloring. Combining safety, quality, and practicality, they are an essential stationery tool for all creative work.",
       price: "Rs. 500",
-      image: "../assets/pl-img12.png",
+      image: "https://images.pexels.com/photos/7054394/pexels-photo-7054394.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     }
@@ -1304,15 +1284,14 @@ if (pelikanPen) {
   let html = '';
   for (let i = 0; i < pelikanProducts.pens.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6">
-        <div class="card">
+      <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+        <div class="card auto-show">
           <img src=${pelikanProducts.pens[i].image} class="card-img-top img-fluid" alt="">
-          <div class="card-body">
-            <h5>${pelikanProducts.pens[i].title}</h5>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class='text-truncate'>${pelikanProducts.pens[i].title}</h5>
             <p>${pelikanProducts.pens[i].price}</p>
             <div>
             <a href="../products-page/detailpage.html?featured=pelikanProducts&id=${i}&category=pens" class="btn btn-info">${pelikanProducts.pens[i].button}</a>
-            <a href="#" class="btn btn-primary">${pelikanProducts.pens[i].addToCart}</a>
             </div>
           </div>
         </div>
@@ -1325,15 +1304,14 @@ if (pelikanPencil) {
   let html = '';
   for (let i = 0; i < pelikanProducts.pencils.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6">
-        <div class="card">
+      <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+        <div class="card auto-show">
           <img src=${pelikanProducts.pencils[i].image} class="card-img-top img-fluid" alt="">
-          <div class="card-body">
-            <h5>${pelikanProducts.pencils[i].title}</h5>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class='text-truncate'>${pelikanProducts.pencils[i].title}</h5>
             <p>${pelikanProducts.pencils[i].price}</p>
             <div>
             <a href="../products-page/detailpage.html?featured=pelikanProducts&id=${i}&category=pencils" class="btn btn-info">${pelikanProducts.pencils[i].button}</a>
-            <a href="#" class="btn btn-primary">${pelikanProducts.pencils[i].addToCart}</a>
             </div>
           </div>
         </div>
@@ -1346,15 +1324,14 @@ if (pelikanColor) {
   let html = '';
   for (let i = 0; i < pelikanProducts.colors.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6">
-        <div class="card">
+      <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+        <div class="card auto-show">
           <img src=${pelikanProducts.colors[i].image} class="card-img-top img-fluid" alt="">
-          <div class="card-body">
-            <h5>${pelikanProducts.colors[i].title}</h5>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class='text-truncate'>${pelikanProducts.colors[i].title}</h5>
             <p>${pelikanProducts.colors[i].price}</p>
             <div>
             <a href="../products-page/detailpage.html?featured=pelikanProducts&id=${i}&category=colors" class="btn btn-info">${pelikanProducts.colors[i].button}</a>
-            <a href="#" class="btn btn-primary">${pelikanProducts.colors[i].addToCart}</a>
             </div>
           </div>
         </div>
@@ -1375,7 +1352,7 @@ if (pelikanColor) {
       title: "Pilot Super Grip Pencil",
       text: "The Pilot Super Grip Pencil is a high-quality mechanical pencil designed for maximum comfort and precise writing. Its ergonomic rubber grip ensures minimal hand fatigue, making it perfect for long study or office sessions. Smooth graphite core delivers consistent and sharp lines on various paper types. Lightweight yet durable, it resists breakage and provides reliability for students, professionals, and artists. Ideal for exams, note-taking, and creative projects, this pencil combines functionality, comfort, and quality, making it a versatile and essential stationery tool.",
       price: "Rs. 300",
-      image: "../assets/pi-img1.png",
+      image: "https://images.pexels.com/photos/1237647/pexels-photo-1237647.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1385,7 +1362,7 @@ if (pelikanColor) {
       title: "Pilot Neon Pencil",
       text: "The Pilot Neon Pencil features a bright neon-colored body for easy identification and stylish writing. Its smooth graphite core ensures effortless, consistent lines suitable for note-taking, sketching, and classroom assignments. The lightweight, durable design provides comfort for extended use. Perfect for students and creative professionals, this pencil combines visibility, practicality, and quality, making it a reliable tool for daily writing, artistic tasks, and school projects.",
       price: "Rs. 150",
-      image: "../assets/pi-img2.png",
+      image: "https://images.pexels.com/photos/159752/pencil-office-design-creative-159752.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1395,7 +1372,7 @@ if (pelikanColor) {
       title: "Pilot Exam Pencil",
       text: "The Pilot Exam Pencil is designed specifically for rigorous exam writing sessions. Its strong graphite core ensures dark, consistent lines while resisting breakage. Ergonomically crafted, it offers comfort and reduces hand strain during long periods of writing. Lightweight and reliable, this pencil is perfect for students seeking precision and durability. Whether for tests, classroom notes, or creative work, the Pilot Exam Pencil provides excellent performance, comfort, and quality for academic and professional needs.",
       price: "Rs. 120",
-      image: "../assets/pi-img3.png",
+      image: "https://images.pexels.com/photos/8125679/pexels-photo-8125679.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1405,7 +1382,7 @@ if (pelikanColor) {
       title: "Pilot Graphite Pencil",
       text: "The Pilot Graphite Pencil offers a rich, dark lead for clean, sharp, and precise writing or drawing. Its high-quality graphite ensures smooth, consistent lines, ideal for note-taking, sketching, and exams. Ergonomically designed and lightweight, it reduces hand fatigue during extended use. Durable and reliable, this pencil is perfect for students, professionals, and artists who value precision and quality. Combining comfort, performance, and reliability, the Pilot Graphite Pencil is a versatile stationery essential.",
       price: "Rs. 200",
-      image: "../assets/pi-img4.png",
+      image: "https://images.pexels.com/photos/7917565/pexels-photo-7917565.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     }
@@ -1418,7 +1395,7 @@ if (pelikanColor) {
       title: "Pilot G2 Gel Pen",
       text: "The Pilot G2 Gel Pen provides smooth, bold ink flow for effortless and vibrant writing. Its premium gel ink ensures consistent, smudge-free lines suitable for school, office, and personal projects. Ergonomic design reduces hand fatigue and enhances comfort during long writing sessions. Durable and reliable, it is perfect for students, professionals, and creatives. Combining elegance, functionality, and superior performance, this pen delivers a high-quality writing experience every time.",
       price: "Rs. 250",
-      image: "../assets/pi-img5.png",
+      image: "https://images.pexels.com/photos/27618085/pexels-photo-27618085.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1428,7 +1405,7 @@ if (pelikanColor) {
       title: "Pilot V7 Hi-Tecpoint",
       text: "The Pilot V7 Hi-Tecpoint is a precision needle-tip pen designed for clear, accurate, and sharp writing. Its smooth ink flow ensures effortless notes, technical work, and professional documentation. Lightweight and ergonomic, it provides comfort during extended writing sessions. Durable and reliable, this pen is ideal for students, engineers, and professionals requiring precision and consistency. Combining innovative design, functionality, and high-quality performance, the Pilot V7 Hi-Tecpoint delivers superior writing experience.",
       price: "Rs. 400",
-      image: "../assets/pi-img6.png",
+      image: "https://images.pexels.com/photos/7054783/pexels-photo-7054783.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1438,7 +1415,7 @@ if (pelikanColor) {
       title: "Pilot Fountain Pen",
       text: "The Pilot Fountain Pen is a refillable, elegant writing instrument designed for smooth, professional ink flow. Its fine nib allows effortless, precise writing for documents, letters, and creative work. Lightweight and durable, it provides comfort during long writing sessions. Trusted by students and professionals alike, it combines style, functionality, and superior performance. Ideal for office, academic, or personal use, this pen ensures a high-quality, refined writing experience.",
       price: "Rs. 1,200",
-      image: "../assets/pi-img7.png",
+      image: "https://images.pexels.com/photos/4862761/pexels-photo-4862761.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1448,7 +1425,7 @@ if (pelikanColor) {
       title: "Pilot Acroball Pen",
       text: "The Pilot Acroball Pen is a hybrid ink pen combining smooth flow with excellent grip for effortless writing. Its innovative ink technology provides bold, consistent lines while resisting smudging. Ergonomic design ensures comfort during extended writing sessions. Durable and reliable, it is suitable for students, professionals, and artists. Combining functionality, precision, and comfort, the Pilot Acroball Pen delivers an exceptional, high-quality writing experience for all tasks.",
       price: "Rs. 500",
-      image: "../assets/pi-img8.png",
+      image: "https://images.pexels.com/photos/5285835/pexels-photo-5285835.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     }
@@ -1461,7 +1438,7 @@ if (pelikanColor) {
       title: "Pilot Whiteboard Marker",
       text: "The Pilot Whiteboard Marker features bold, erasable ink for smooth writing on whiteboards. Ideal for classrooms, offices, and presentations, it offers clear, vibrant, and easy-to-read markings. Lightweight and durable, it ensures reliable performance and comfort during extended use. Non-toxic and safe, it is perfect for students, teachers, and professionals. Combining quality, precision, and convenience, this marker is a dependable tool for all whiteboard tasks and creative projects.",
       price: "Rs. 350",
-      image: "../assets/pi-img9.png",
+      image: "https://images.pexels.com/photos/8459341/pexels-photo-8459341.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1471,7 +1448,7 @@ if (pelikanColor) {
       title: "Pilot Permanent Marker",
       text: "The Pilot Permanent Marker is designed for long-lasting, durable marks on various surfaces. Its bold, smooth ink provides high visibility and reliable performance for labeling, crafting, and office tasks. Ergonomic and comfortable, it is suitable for prolonged use without fatigue. Non-toxic and safe, this marker is perfect for students, professionals, and hobbyists. Combining precision, durability, and quality, the Pilot Permanent Marker ensures clear and consistent results every time.",
       price: "Rs. 280",
-      image: "../assets/pi-img10.png",
+      image: "https://images.pexels.com/photos/9939267/pexels-photo-9939267.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1481,7 +1458,7 @@ if (pelikanColor) {
       title: "Pilot Highlighter",
       text: "The Pilot Highlighter features bright, fluorescent ink ideal for emphasizing text in study notes, documents, and creative projects. Its smooth application ensures clear, vibrant highlights without smudging. Lightweight and ergonomic, it provides comfort during extended use. Safe and non-toxic, it is perfect for students and professionals alike. Combining visibility, reliability, and performance, this highlighter enhances productivity and adds color to all your important notes and documents.",
       price: "Rs. 150",
-      image: "../assets/pi-img11.png",
+      image: "https://images.pexels.com/photos/5038394/pexels-photo-5038394.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1491,7 +1468,7 @@ if (pelikanColor) {
       title: "Pilot Color Pens",
       text: "The Pilot Color Pens set includes vibrant, smooth-flowing ink pens perfect for school projects, creative work, and personal notes. Each pen is designed for comfort, precision, and consistent ink delivery. Lightweight and durable, these pens provide a reliable and enjoyable writing experience. Ideal for students, artists, and hobbyists, they combine quality, functionality, and convenience in a versatile stationery set for everyday tasks.",
       price: "Rs. 600",
-      image: "../assets/pi-img12.png",
+      image: "https://images.pexels.com/photos/8459336/pexels-photo-8459336.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     }
@@ -1507,15 +1484,14 @@ if (pilotPen) {
   let html = '';
   for (let i = 0; i < pilotProducts.pens.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6">
+      <div class="col-md-3 col-sm-6 auto-show d-flex justify-content-center">
         <div class="card">
           <img src=${pilotProducts.pens[i].image} class="card-img-top img-fluid" alt="">
-          <div class="card-body">
-            <h5>${pilotProducts.pens[i].title}</h5>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class='text-truncate'>${pilotProducts.pens[i].title}</h5>
             <p>${pilotProducts.pens[i].price}</p>
             <div>
             <a href="../products-page/detailpage.html?featured=pilotProducts&id=${i}&category=pens" class="btn btn-info">${pilotProducts.pens[i].button}</a>
-            <a href="#" class="btn btn-primary">${pilotProducts.pens[i].addToCart}</a>
             </div>
           </div>
         </div>
@@ -1528,15 +1504,14 @@ if (pilotPencil) {
   let html = '';
   for (let i = 0; i < pilotProducts.pencils.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6">
+      <div class="col-md-3 col-sm-6 auto-show d-flex justify-content-center">
         <div class="card">
           <img src=${pilotProducts.pencils[i].image} class="card-img-top img-fluid" alt="">
-          <div class="card-body">
-            <h5>${pilotProducts.pencils[i].title}</h5>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class='text-truncate'>${pilotProducts.pencils[i].title}</h5>
             <p>${pilotProducts.pencils[i].price}</p>
             <div>
             <a href="../products-page/detailpage.html?featured=pilotProducts&id=${i}&category=pencils" class="btn btn-info">${pilotProducts.pencils[i].button}</a>
-            <a href="#" class="btn btn-primary">${pilotProducts.pencils[i].addToCart}</a>
             </div>
           </div>
         </div>
@@ -1549,15 +1524,14 @@ if (pilotColor) {
   let html = '';
   for (let i = 0; i < pilotProducts.colors.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6">
+      <div class="col-md-3 col-sm-6 auto-show d-flex justify-content-center">
         <div class="card">
           <img src=${pilotProducts.colors[i].image} class="card-img-top img-fluid" alt="">
-          <div class="card-body">
-            <h5>${pilotProducts.colors[i].title}</h5>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class='text-truncate'>${pilotProducts.colors[i].title}</h5>
             <p>${pilotProducts.colors[i].price}</p>
             <div>
             <a href="../products-page/detailpage.html?featured=pilotProducts&id=${i}&category=colors" class="btn btn-info">${pilotProducts.colors[i].button}</a>
-            <a href="#" class="btn btn-primary">${pilotProducts.colors[i].addToCart}</a>
             </div>
           </div>
         </div>
@@ -1565,9 +1539,6 @@ if (pilotColor) {
   }
   pilotColor.innerHTML = html;
 }
-
-
-
 
     // Staedtler products
 
@@ -1579,7 +1550,7 @@ if (pilotColor) {
       title: "Staedtler Norica Pencil",
       text: "The Staedtler Norica Pencil is a high-quality HB pencil designed for smooth and precise writing. Its durable graphite core ensures consistent lines suitable for school, office, and art projects. Ergonomically crafted for comfort, it reduces hand fatigue during long writing or drawing sessions. Ideal for students, professionals, and artists, this pencil offers reliability, performance, and durability. Lightweight yet strong, it resists breakage while delivering excellent results on various paper types. Combining functionality and quality, the Staedtler Norica Pencil is a versatile and essential tool for everyday writing tasks.",
       price: "Rs. 50",
-      image: "../assets/st-img1.png",
+      image: "https://media.istockphoto.com/id/186851733/photo/pencil.jpg?b=1&s=612x612&w=0&k=20&c=AuqvhjWpeM93N79IohWPPKA3NgP0xnGCl2JQA8lO5DA=",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1589,7 +1560,7 @@ if (pilotColor) {
       title: "Staedtler Mars Pencil",
       text: "The Staedtler Mars Pencil is a professional-grade pencil perfect for technical drawing, sketching, and precise note-taking. Its high-quality graphite core provides dark, consistent lines while remaining smooth on paper. Ergonomic design ensures comfort during long writing or drawing sessions. Suitable for students, engineers, and artists, this pencil combines durability, reliability, and excellent performance. Its elegant design, consistent lead quality, and smooth writing make it an indispensable stationery tool for creative and academic tasks.",
       price: "Rs. 100",
-      image: "../assets/st-img2.png",
+      image: "https://images.pexels.com/photos/1153875/pexels-photo-1153875.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1599,7 +1570,7 @@ if (pilotColor) {
       title: "Staedtler Triangular Pencil",
       text: "The Staedtler Triangular Pencil features an ergonomic triangular body that provides a comfortable and secure grip for extended writing or drawing sessions. Its smooth graphite core ensures clean, precise lines suitable for schoolwork, technical sketches, and art projects. Lightweight yet durable, it resists breakage and maintains consistent performance. Ideal for students, artists, and professionals, this pencil blends functionality, comfort, and quality. Its thoughtful design encourages proper grip, reducing hand fatigue and enhancing accuracy for all writing and creative tasks.",
       price: "Rs. 70",
-      image: "../assets/st-img3.png",
+      image: "https://media.istockphoto.com/id/2180133346/photo/one-sharp-graphite-pencil-on-white-background-closeup-space-for-text.jpg?s=612x612&w=0&k=20&c=JCVPA3oEYmveeUcBJS8QT1xj78b8cA7cDMvioHA14us=",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1609,7 +1580,7 @@ if (pilotColor) {
       title: "Staedtler Jumbo Pencil",
       text: "The Staedtler Jumbo Pencil is designed with a thick body, making it ideal for beginners and young children learning to write or draw. Its smooth graphite core delivers consistent, clean lines on various paper types. The durable design resists breakage while providing comfort and stability during use. Perfect for classroom activities, art projects, and home practice, this pencil encourages proper hand grip and control. Combining safety, performance, and quality, the Staedtler Jumbo Pencil is an excellent choice for developing writing and drawing skills.",
       price: "Rs. 90",
-      image: "../assets/st-img4.png",
+      image: "https://images.pexels.com/photos/11632986/pexels-photo-11632986.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     }
@@ -1622,7 +1593,7 @@ if (pilotColor) {
       title: "Staedtler Ball Pen",
       text: "The Staedtler Ball Pen delivers smooth, effortless writing for everyday use at school, office, or home. Its high-quality ink flows consistently, producing clear, vibrant lines without smudging. Ergonomically designed, it provides comfort during extended writing sessions, reducing hand fatigue. Durable and reliable, this pen is ideal for students, professionals, and artists who require precision and consistency. Combining functionality, comfort, and quality, the Staedtler Ball Pen ensures a superior writing experience for all tasks and projects.",
       price: "Rs. 200",
-      image: "../assets/st-img5.png",
+      image: "https://images.pexels.com/photos/1119790/pexels-photo-1119790.jpeg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1632,7 +1603,7 @@ if (pilotColor) {
       title: "Staedtler Gel Pen",
       text: "The Staedtler Gel Pen provides bold, smooth ink for clear and precise writing. Its comfortable grip allows for extended writing sessions without fatigue. Ideal for note-taking, school assignments, and office work, it ensures consistent performance and vibrant lines. The durable design makes it a reliable choice for students, professionals, and creatives seeking high-quality pens. Combining style, comfort, and precision, the Staedtler Gel Pen enhances productivity and writing enjoyment across all tasks.",
       price: "Rs. 300",
-      image: "../assets/st-img6.png",
+      image: "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVufGVufDB8fDB8fHww",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1642,7 +1613,7 @@ if (pilotColor) {
       title: "Staedtler Fountain Pen",
       text: "The Staedtler Fountain Pen is a refillable pen designed for smooth, elegant writing. Its fine nib delivers consistent ink flow, ensuring clear, professional lines on all types of paper. Lightweight and ergonomic, it offers comfort for extended use, ideal for students, professionals, and creative writing tasks. Durable and reliable, this pen combines sophistication, functionality, and high-quality performance, making it a versatile tool for academic, office, or personal writing.",
       price: "Rs. 1,500",
-      image: "../assets/st-img7.png",
+      image: "https://images.unsplash.com/photo-1567855354833-ac2c4f967b0c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGVuc3xlbnwwfHwwfHx8MA%3D%3D",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1652,7 +1623,7 @@ if (pilotColor) {
       title: "Staedtler Triplus Pen",
       text: "The Staedtler Triplus Pen features an ergonomic triangular grip for comfortable and precise writing. Its smooth ink flow ensures clear, consistent lines suitable for school, office, or creative work. Lightweight and durable, it provides reliable performance for students, professionals, and artists. Combining design, comfort, and functionality, the Staedtler Triplus Pen is ideal for long writing sessions and creative projects, enhancing productivity and writing experience.",
       price: "Rs. 400",
-      image: "../assets/st-img8.png",
+      image: "https://cdn.pixabay.com/photo/2017/02/26/00/23/ball-point-pen-2099187_1280.jpg",
       button: "View Details",
       addToCart: "Add to Cart"
     }
@@ -1665,7 +1636,7 @@ if (pilotColor) {
       title: "Staedtler Color Pencils",
       text: "The Staedtler Color Pencils set includes vibrant, high-quality pencils perfect for drawing, coloring, and creative projects. Each pencil provides smooth, consistent color and is easy to sharpen. Lightweight and durable, these pencils are ideal for students, artists, and hobbyists seeking precision and reliable performance. Combining quality, comfort, and functionality, the Staedtler Color Pencils enhance artistic expression and schoolwork, making them a versatile and essential stationery tool.",
       price: "Rs. 600",
-      image: "../assets/st-img9.png",
+      image: "https://cdn.pixabay.com/photo/2025/03/21/18/04/art-9485478_1280.jpg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1675,7 +1646,7 @@ if (pilotColor) {
       title: "Staedtler Crayons",
       text: "The Staedtler Crayons offer bright, non-toxic, and safe coloring options for children and students. Their smooth texture ensures even application for art projects, coloring, and school assignments. Durable and easy to use, these crayons provide vibrant and consistent colors. Lightweight and ergonomic, they are perfect for young learners and creative tasks. Combining safety, quality, and performance, the Staedtler Crayons enhance creativity and learning, making them an excellent choice for classrooms and home art activities.",
       price: "Rs. 250",
-      image: "../assets/st-img10.png",
+      image: "https://cdn.pixabay.com/photo/2019/03/02/17/43/colored-pencils-4030204_1280.jpg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1685,7 +1656,7 @@ if (pilotColor) {
       title: "Staedtler Markers",
       text: "The Staedtler Markers set includes bold, smooth-flowing ink markers suitable for projects, presentations, and artwork. Each marker delivers vibrant, consistent colors for school or professional use. Comfortable and durable, they provide precision and ease of application. Ideal for students, artists, and professionals, these markers combine quality, reliability, and convenience. Enhancing creativity and productivity, the Staedtler Markers are an essential tool for art, projects, and color-coded tasks.",
       price: "Rs. 500",
-      image: "../assets/st-img11.png",
+      image: "https://cdn.pixabay.com/photo/2015/03/23/21/11/colored-pencils-686679_1280.jpg",
       button: "View Details",
       addToCart: "Add to Cart"
     },
@@ -1695,7 +1666,7 @@ if (pilotColor) {
       title: "Staedtler Highlighters",
       text: "The Staedtler Highlighters feature bright, vivid ink ideal for emphasizing text in study notes, documents, and office work. Their smooth application ensures even, consistent highlighting without smudging. Ergonomic and lightweight, they provide comfort during prolonged use. Suitable for students, professionals, and creative tasks, these highlighters combine visibility, precision, and durability. The Staedtler Highlighters enhance productivity and organization, making them an indispensable tool for school, office, and personal projects.",
       price: "Rs. 350",
-      image: "../assets/st-img12.png",
+      image: "https://cdn.pixabay.com/photo/2015/08/28/01/49/colour-pencils-911354_1280.jpg",
       button: "View Details",
       addToCart: "Add to Cart"
     }
@@ -1711,15 +1682,14 @@ if (staedtlerPen) {
   let html = '';
   for (let i = 0; i < staedtlerProducts.pens.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6">
-        <div class="card">
+      <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+        <div class="card auto-show">
           <img src=${staedtlerProducts.pens[i].image} class="card-img-top img-fluid" alt="">
-          <div class="card-body">
-            <h5>${staedtlerProducts.pens[i].title}</h5>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class='text-truncate'>${staedtlerProducts.pens[i].title}</h5>
             <p>${staedtlerProducts.pens[i].price}</p>
             <div>
               <a href="../products-page/detailpage.html?featured=staedtlerProducts&id=${i}&category=pens" class="btn btn-info">${staedtlerProducts.pens[i].button}</a>
-              <a href="#" class="btn btn-primary">${staedtlerProducts.pens[i].addToCart}</a>
             </div>
           </div>
         </div>
@@ -1732,15 +1702,14 @@ if (staedtlerPencil) {
   let html = '';
   for (let i = 0; i < staedtlerProducts.pencils.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6">
-        <div class="card">
+      <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+        <div class="card auto-show">
           <img src=${staedtlerProducts.pencils[i].image} class="card-img-top img-fluid" alt="">
-          <div class="card-body">
-            <h5>${staedtlerProducts.pencils[i].title}</h5>
+          <div class="card-body d-flex justify-content-center">
+            <h5 class='text-truncate'>${staedtlerProducts.pencils[i].title}</h5>
             <p>${staedtlerProducts.pencils[i].price}</p>
             <div>
               <a href="../products-page/detailpage.html?featured=staedtlerProducts&id=${i}&category=pencils" class="btn btn-info">${staedtlerProducts.pencils[i].button}</a>
-              <a href="#" class="btn btn-primary">${staedtlerProducts.pencils[i].addToCart}</a>
             </div>
           </div>
         </div>
@@ -1753,15 +1722,14 @@ if (staedtlerColor) {
   let html = '';
   for (let i = 0; i < staedtlerProducts.colors.length; i++) {
     html += `
-      <div class="col-md-3 col-sm-6">
-        <div class="card">
+      <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+        <div class="card auto-show">
           <img src=${staedtlerProducts.colors[i].image} class="card-img-top img-fluid" alt="">
-          <div class="card-body">
-            <h5>${staedtlerProducts.colors[i].title}</h5>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class='text-truncate'>${staedtlerProducts.colors[i].title}</h5>
             <p>${staedtlerProducts.colors[i].price}</p>
             <div>
               <a href="../products-page/detailpage.html?featured=staedtlerProducts&id=${i}&category=colors" class="btn btn-info">${staedtlerProducts.colors[i].button}</a>
-              <a href="#" class="btn btn-primary">${staedtlerProducts.colors[i].addToCart}</a>
             </div>
           </div>
         </div>
@@ -1769,10 +1737,6 @@ if (staedtlerColor) {
   }
   staedtlerColor.innerHTML = html;
 }
-  
-
-
-
     
 let productOne = document.getElementById('productOne')
 let productTwo = document.getElementById('productTwo')
@@ -1830,21 +1794,4 @@ for (let i = 0; i < staedtlerProducts.colors.length; i++) {
 
 productTwo.innerHTML = html
 
-}
-
-   
-let proOneDiv = document.getElementById('pro-1-compare')
-let proTwoDiv = document.getElementById('pro-2-compare')
-
-function productAppear() {
-  let selectedItemOne = productOne.value
-  let selectedItemTwo = productTwo.value
-  if (selectedItemOne === 'Open this select menu' || selectedItemTwo === 'Open this select menu') {
-    let error = document.getElementById('showError').innerHTML = `
-    
-     <button class=" btn btn-outline-primary mb-4" onclick="(productAppear())"> compare</button>
-    <h5>Select Valid Product</h5>`
-  }
-  
-  
 }
